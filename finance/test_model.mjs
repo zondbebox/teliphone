@@ -1,0 +1,46 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { calculate, directory } from './calculate.mjs';
+const input = JSON.parse(await fs.readFile(path.join(directory, 'inputs.json'), 'utf8'));
+const { summary: s, monthly } = calculate(input);
+const close = (a,b,label) => assert.ok(Math.abs(a-b)<0.02, `${label}: ${a} vs ${b}`);
+assert.equal(monthly.length, 48);
+close(s.scenarios.base.year1.completed,180,'Y1 independent funnel');
+close(s.scenarios.base.year2.completed,1500,'Y2 independent funnel');
+close(s.shared.initial_work,7780000,'hours and rates');
+close(s.shared.contingency,1518000,'contingency');
+close(s.shared.contribution_per_traveler,11440,'unit contribution');
+close(s.scenarios.base.year1.gross_cash_uses,19298800,'strict gross Y1 cost');
+assert.ok(s.scenarios.base.year1.gross_cash_uses<input.case.budget);
+assert.equal(s.scenarios.base.payback_month,23);
+assert.equal(s.scenarios.downside.payback_month,null);
+close(s.scenarios.base.ending_cash_flow,261200,'base closing cash');
+close(s.scenarios.downside.ending_cash_flow,-5504560,'downside closing cash');
+close(s.scenarios.base.year2.foreign_share,1486/4900,'annual base denominator');
+close(s.scenarios.downside.year2.foreign_share,1081/4450,'annual downside denominator');
+assert.equal(s.case_reconciliation.difference,400000);
+assert.equal(s.shared.baseline_domestic_approximate+s.shared.baseline_foreign_approximate,3400);
+for(let i=0;i<24;i++){
+  const b=monthly[i], d=monthly[i+24];
+  close(d.completed,b.completed*0.7,'exact traveler downside');
+  for(const key of ['operating','marketing','development','contingency']) close(d[key],b[key],`unchanged fixed ${key}`);
+  for(const key of ['revenue','delivery','payment','service','contribution']) close(d[key],b[key]*0.7,`variable ${key}`);
+  close(b.cash_flow,b.revenue-b.delivery-b.payment-b.service-b.operating-b.marketing-b.development-b.contingency,'cash-flow identity');
+  assert.ok(b.completed<=b.incremental_capacity);
+  assert.ok(b.guide_days<=b.guide_capacity_days);
+  assert.ok(b.cumulative_cash_flow<0 || b.month>=23,'payback first crossing');
+}
+// Meaningful sensitivity and boundary checks on the deterministic model.
+const zero=structuredClone(input); zero.year1_qualified_sessions.fill(0);zero.year2_qualified_sessions.fill(0);
+const zs=calculate(zero).summary;
+assert.equal(zs.scenarios.base.payback_month,null);
+assert.equal(zs.scenarios.base.total24.revenue,0);
+assert.equal(zs.scenarios.base.total24.marketing_cost_per_incremental_completed,null);
+assert.equal(zs.scenarios.base.total24.implied_cost_per_paid_session,null);
+close(zs.scenarios.base.year2.foreign_share,0.04,'zero-new-traveler share');
+const constrained=structuredClone(input);constrained.year2_incremental_departures.fill(0);
+assert.equal(calculate(constrained).summary.scenarios.base.year2.completed,0);
+const expensive=structuredClone(input);expensive.drivers.tour_delivery_share=0.8;
+assert.ok(calculate(expensive).summary.scenarios.base.ending_cash_flow<s.scenarios.base.ending_cash_flow);
+console.log('PASS: independent cash totals, exact downside, 24 monthly periods, capacity, foreign denominators, payback, zero-demand and capacity/price-cost sensitivity checks.');

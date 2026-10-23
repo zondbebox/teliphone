@@ -31,35 +31,35 @@ Node with no dependencies is the implementation choice for this bounded local de
 5. Sold-out, invalid dates and no-match states remain honest and usable on mobile.
 
 ## Task 1: evidence and finances (parallel)
-- [ ] Read all case pages, extract requirements and missing rules.
-- [ ] Open primary sources; write research/sources.csv and assumptions.
-- [ ] Build finance/inputs.json, calculation script, monthly outputs, summary.json and formula XLSX.
-- [ ] Independently check downside ratios, costs, cash flow, payback and foreign share.
+- [x] Read all case pages, extract requirements and missing rules.
+- [x] Open primary sources; write research/sources.csv and assumptions.
+- [x] Build finance/inputs.json, calculation script, monthly outputs, summary.json and formula XLSX.
+- [x] Independently check downside ratios, costs, cash flow, payback and foreign share.
 
 ## Task 2: server and domain
 Files: server.mjs, lib/catalog.mjs, lib/store.mjs, tests/*.test.mjs.
-- [ ] Write behavioral tests before implementation and observe failures.
-- [ ] GET /api/catalog returns {tours}; tours expose id,title,region,city,days,price,difficulty,interests,description,itinerary,included,excluded,cancellation,meeting,updatedAt,departures [{id,date,capacity,available}].
-- [ ] POST /api/match takes {startDate,endDate,party,budget,city,interest,difficulty}; returns {tours,explanation}.
-- [ ] POST /api/bookings takes {tourId,departureId,party,name,email,acceptedTerms,idempotencyKey}; returns {booking}. GET /api/bookings lists own; GET /api/bookings/:id reads own. Each booking: id,reference,status,party,total,name,email,tour (snapshot),departure,guide,timeline.
-- [ ] POST /api/bookings/:id/payment takes {outcome,eventId}; outcomes success,declined,cancelled,pending. Returns {booking}. Only confirmed means successful demo payment.
-- [ ] GET /api/admin with x-admin-key returns {tours,bookings,questions}. PATCH /api/admin/bookings/:id supports guide and status completed only when confirmed. PATCH /api/admin/tours/:id supports price, cancellation and departure capacity without invalidating holds.
-- [ ] Protect mutation origin, bound request body, sanitize public errors, use ownership cookies and no-store responses. Bind 127.0.0.1 only.
-- [ ] Run node --test; record actual results.
+- [x] Write behavioral tests before implementation and observe failures.
+- [x] GET /api/catalog returns {tours}; tours expose id,title,region,city,days,price,difficulty,interests,description,itinerary,included,excluded,cancellation,meeting,updatedAt,departures [{id,date,capacity,available}].
+- [x] POST /api/match takes {startDate,endDate,party,budget,city,interest,difficulty}; returns {tours,explanation}.
+- [x] POST /api/bookings takes {tourId,departureId,party,name,email,acceptedTerms,idempotencyKey}; returns {booking}. GET /api/bookings lists own; GET /api/bookings/:id reads own. Each booking: id,reference,status,party,total,name,email,tour (snapshot),departure,guide,timeline.
+- [x] POST /api/bookings/:id/payment takes {outcome,eventId}; outcomes success,declined,cancelled,pending. Returns {booking}. Only confirmed means successful demo payment.
+- [x] GET /api/admin with x-admin-key returns {tours,bookings,questions}. PATCH /api/admin/bookings/:id supports guide and status completed only when confirmed. PATCH /api/admin/tours/:id supports price, cancellation and departure capacity without invalidating holds.
+- [x] Protect mutation origin, bound request body, sanitize public errors, use ownership cookies and no-store responses. Bind 127.0.0.1 only.
+- [x] Run node --test; record actual results.
 
 ## Task 3: responsive product UI
 Files: public/index.html, public/app.js, public/styles.css, public/images/.
-- [ ] Build catalog, matching form, tour detail/Truth Card, checkout, payment controls, passport and admin.
-- [ ] Use catalog from server throughout, safe DOM encoding and accessible labels/focus.
-- [ ] Browser-test full booking, decline/retry, pending/cancelled, no matches, sold-out and operator update.
-- [ ] Inspect 360/768/1440 widths and save real screenshots.
+- [x] Build catalog, matching form, tour detail/Truth Card, checkout, payment controls, passport and admin.
+- [x] Use catalog from server throughout, safe DOM encoding and accessible labels/focus.
+- [x] Browser-test full booking, decline/retry, pending/cancelled, no matches, sold-out and operator update.
+- [x] Inspect 360/768/1440 widths and save real screenshots.
 
 ## Task 4: report and handover
 Files: docs/report.md, scripts/build_report.py, deliverables/, assets/.
-- [ ] Report consumes finance summary, opened sources and actual screenshots.
-- [ ] Export editable DOCX and PDF; inspect every page, page counts and citations.
-- [ ] Independent code/package review; fix significant findings with regression tests.
-- [ ] Final checks, secret scan, intended-file review, coherent commits and authorized push if access permits; verify remote SHA.
+- [x] Report consumes finance summary, opened sources and actual screenshots.
+- [x] Export editable DOCX and PDF; inspect every PDF page, page counts and citations. DOCX structure verified; visual pagination remains unverified because LibreOffice is unavailable.
+- [x] Independent code/package review; fix significant findings with regression tests.
+- [x] Final checks, secret scan, intended-file review, coherent commits and authorized push if access permits; verify remote SHA.
 
 ## Progress and limitations
-Initial workspace has no source files or commits. GitHub connector initially returned 404; authenticated browser displays repository empty-setup page. Git HTTPS helper requires a process-local runtime path adjustment. No author identity has yet been verified. No public deployment authorized.
+Implemented the bounded local demonstration and produced the research, financial and report package. Twenty automated application tests pass; browser evidence covers the full desktop and mobile journey and 360/768/1440 widths. The report has six main A4 pages plus References and AI Declaration, all visually inspected. The financial workbook and both scenarios were independently checked. See docs/verification.md and deliverables/report_verification.json for evidence and limits. The user authorized a chosen Git author; local commits identify Codex <codex@localhost>. An authenticated empty remote permits main under the supplied rule. Git delivery is recorded in the final handover after remote-tip verification. No public deployment occurred. Official AI rules, team eligibility, substantive human authorship review and real-user validation remain pending and are not marked complete by this implementation checklist.

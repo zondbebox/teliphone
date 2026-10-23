@@ -1,0 +1,7 @@
+# Preserve exported documents, images and licensed fonts byte-for-byte.
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.png binary
+*.jpg binary
+*.ttf binary

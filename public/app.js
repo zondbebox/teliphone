@@ -43,4 +43,3 @@ document.addEventListener('click',event=>{const link=event.target.closest('a');i
 document.addEventListener('click',async event=>{const target=event.target.closest('button');if(!target)return;if(target.hasAttribute('data-print'))window.print();if(target.hasAttribute('data-logout')){state.adminKey='';await operator();}if(target.dataset.payment){const controls=target.closest('#payment-controls');await busy(controls,async()=>{const {booking}=await api(`/api/bookings/${controls.dataset.booking}/payment`,{method:'POST',body:JSON.stringify({outcome:target.dataset.payment,eventId:id()})});if(controls.isConnected===false)return;if(booking.status==='confirmed')location.hash=`passport/${booking.id}`;else payment(booking);});}});
 window.addEventListener('hashchange',render);
 render();
-

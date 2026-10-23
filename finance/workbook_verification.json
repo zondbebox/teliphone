@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "Base Y1 volume",
+    "Base Y2 volume",
+    "Base final cash",
+    "Base annual denominator",
+    "Base strict budget",
+    "Downside Y1 volume",
+    "Downside Y2 volume",
+    "Downside final cash",
+    "Downside annual denominator",
+    "Downside strict budget",
+    "Later-period input recalculation and capacity cap"
+  ],
+  "formula_error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "engine": "Artifact Tool calculation and XLSX export; Microsoft Excel desktop not available for native verification"
+}
