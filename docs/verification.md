@@ -1,3 +1,5 @@
+> Historical baseline verification. The current full demonstration is documented in [full-demo-verification.md](full-demo-verification.md). Broad catalog authoring and private inquiries have since been implemented. Report/model evidence below remains for the unchanged artifacts.
+
 # Verification record
 
 Executed 23 October 2026 against the local working package. These are AI-assisted technical checks, not real-user research or substantive team approval.

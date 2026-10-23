@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=24.16.0 <25" },
+  "engines": {
+    "node": ">=24.16.0 <25"
+  },
   "scripts": {
     "start": "node server.mjs",
     "test": "node --test",
-    "check": "node --check server.mjs && node --check public/app.js",
-    "build": "node scripts/build.mjs"
+    "check": "node --check server.mjs && node --check public/app.js && node --check public/operator.js && node --check public/editorial.js && node --check scripts/demo.mjs",
+    "build": "node scripts/build.mjs",
+    "demo": "node scripts/demo.mjs",
+    "demo:reset": "node scripts/demo.mjs reset"
   }
 }

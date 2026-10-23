@@ -52,8 +52,9 @@ function validAdmin(request, key) {
   return actual.length === expected.length && timingSafeEqual(actual, expected);
 }
 
-export function createApp({ storePath = resolve(root, '.runtime', 'qazaqpass.json'), adminKey = process.env.QAZAQPASS_ADMIN_KEY || 'local-demo-only', now } = {}) {
-  const store = new Store(storePath, now);
+export function createApp({ storePath = resolve(root, '.runtime', 'qazaqpass.json'), adminKey = process.env.QAZAQPASS_ADMIN_KEY || 'local-demo-only', now, presentation = false } = {}) {
+  const store = new Store(storePath, now, { presentation });
+  const cookieName = presentation ? 'qazaqpass_presentation_session' : 'qazaqpass_session';
   const server = createServer(async (request, response) => {
     response.setHeader('cache-control', 'no-store');
     response.setHeader('x-content-type-options', 'nosniff');
@@ -72,12 +73,14 @@ export function createApp({ storePath = resolve(root, '.runtime', 'qazaqpass.jso
       }
       if (path.startsWith('/api/')) {
         if (path.startsWith('/api/admin') && !validAdmin(request, adminKey)) throw new AppError(401, 'A valid local demo operator key is required.');
-        const candidate = request.headers.cookie?.split(';').map(x => x.trim()).find(x => x.startsWith('qazaqpass_session='))?.slice('qazaqpass_session='.length);
+        const candidate = request.headers.cookie?.split(';').map(x => x.trim()).find(x => x.startsWith(`${cookieName}=`))?.slice(cookieName.length + 1);
         const session = store.session(candidate);
-        if (session.fresh) response.setHeader('set-cookie', `qazaqpass_session=${session.id}; HttpOnly; SameSite=Strict; Path=/; Max-Age=2592000`);
+        if (session.fresh) response.setHeader('set-cookie', `${cookieName}=${session.id}; HttpOnly; SameSite=Strict; Path=/; Max-Age=2592000`);
         if (request.method === 'GET' && path === '/api/health') return json(response, 200, { status: 'ok', demo: true });
         if (request.method === 'GET' && path === '/api/catalog') return json(response, 200, { tours: store.catalog() });
         if (request.method === 'POST' && path === '/api/match') return json(response, 200, store.match(await parseBody(request)));
+        if (request.method === 'GET' && path === '/api/questions') return json(response, 200, { questions: store.questions(session.id, url.searchParams.get('tourId')) });
+        if (request.method === 'POST' && path === '/api/questions') return json(response, 201, { question: store.createQuestion(await parseBody(request), session.id) });
         if (request.method === 'GET' && path === '/api/bookings') return json(response, 200, { bookings: store.bookings(session.id) });
         if (request.method === 'POST' && path === '/api/bookings') {
           const result = store.createBooking(await parseBody(request), session.id);
@@ -88,6 +91,9 @@ export function createApp({ storePath = resolve(root, '.runtime', 'qazaqpass.jso
         const paymentPath = path.match(/^\/api\/bookings\/([a-zA-Z0-9-]+)\/payment$/);
         if (request.method === 'POST' && paymentPath) return json(response, 200, { booking: store.payment(paymentPath[1], session.id, await parseBody(request)) });
         if (request.method === 'GET' && path === '/api/admin') return json(response, 200, store.admin());
+        if (request.method === 'POST' && path === '/api/admin/tours') return json(response, 201, { tour: store.createTour(await parseBody(request)) });
+        const adminQuestionPath = path.match(/^\/api\/admin\/questions\/([a-zA-Z0-9-]+)$/);
+        if (request.method === 'PATCH' && adminQuestionPath) return json(response, 200, { question: store.answerQuestion(adminQuestionPath[1], await parseBody(request)) });
         const adminBookingPath = path.match(/^\/api\/admin\/bookings\/([a-zA-Z0-9-]+)$/);
         if (request.method === 'PATCH' && adminBookingPath) return json(response, 200, { booking: store.updateBooking(adminBookingPath[1], await parseBody(request)) });
         const adminTourPath = path.match(/^\/api\/admin\/tours\/([a-zA-Z0-9-]+)$/);

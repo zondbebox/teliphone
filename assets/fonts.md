@@ -19,4 +19,13 @@ Used for body text, navigation and form controls. The variable font is an unmodi
 - License: SIL Open Font License 1.1, copied in full to `public/fonts/Manrope-OFL.txt` from the [official license](https://github.com/google/fonts/blob/main/ofl/manrope/OFL.txt).
 - Copyright 2018 The Manrope Project Authors, [upstream project](https://github.com/googlefonts/manrope).
 
-The supplied runtime did not include fontTools, so no WOFF2 conversion or additional dependency installation was performed. The three font files total 312,488 bytes. Their licenses must remain included when distributing the project.
+## Caveat
+
+Used for small editorial and guide notes. The variable font is an unmodified TrueType file from [google/fonts/ofl/caveat](https://github.com/google/fonts/tree/main/ofl/caveat). The official [family metadata](https://github.com/google/fonts/blob/main/ofl/caveat/METADATA.pb) specifies a weight range of 400–700. Its local filename is simplified for browser URLs; the font data itself is unchanged.
+
+- `public/fonts/Caveat-Variable.ttf`: [official source, Caveat[wght].ttf](https://github.com/google/fonts/blob/main/ofl/caveat/Caveat%5Bwght%5D.ttf); [exact download URL](https://raw.githubusercontent.com/google/fonts/refs/heads/main/ofl/caveat/Caveat%5Bwght%5D.ttf); SHA-256 `0bdb6b660482d31531b3945849fba5916b3ef8695da7024a9e6b9ee3c4157988`.
+- `public/fonts/Caveat-OFL.txt`: [official license source](https://github.com/google/fonts/blob/main/ofl/caveat/OFL.txt); [exact download URL](https://raw.githubusercontent.com/google/fonts/refs/heads/main/ofl/caveat/OFL.txt); SHA-256 `1f9d81d094273d82f3898a1ee8b598a717d050ecbf5ff7bede105b704880157b`.
+- License: SIL Open Font License 1.1, copied in full beside the font.
+- Copyright 2014 The Caveat Project Authors, [upstream project](https://github.com/googlefonts/caveat).
+
+The supplied runtime did not include fontTools, so no WOFF2 conversion or additional dependency installation was performed. The four font files total 716,136 bytes. Their licenses must remain included when distributing the project.

@@ -5,6 +5,8 @@ import vm from 'node:vm';
 import { randomUUID } from 'node:crypto';
 import { seedCatalog } from '../lib/catalog.mjs';
 
+const operatorSource = readFileSync(new URL('../public/operator.js', import.meta.url), 'utf8');
+const editorialSource = readFileSync(new URL('../public/editorial.js', import.meta.url), 'utf8');
 const source = readFileSync(new URL('../public/app.js', import.meta.url), 'utf8');
 const catalog = () => seedCatalog().map(tour => ({ ...tour,
   departures: tour.departures.map(departure => ({ ...departure, available: departure.capacity })) }));
@@ -17,7 +19,7 @@ function deferred() {
 
 // Small DOM boundary for exercising the actual routing and form handlers. This does
 // not replace the real-browser keyboard, layout and HTML parsing verification.
-function harness(hash = '#home', respond = () => undefined) {
+function harness(hash = '#home', respond = () => undefined, storage = new Map()) {
   class Element {
     innerHTML = '';
     textContent = '';
@@ -33,16 +35,18 @@ function harness(hash = '#home', respond = () => undefined) {
   class Form extends Element {
     constructor(id, values, dataset = {}) { super(); this.id = id; this.values = values; this.dataset = dataset; }
   }
-  const main = new Element(), results = new Element(), toast = new Element();
+  const main = new Element(), results = new Element(), questions = new Element(), toast = new Element();
   const handlers = new Map();
   const location = { hash };
   const calls = [];
   const context = vm.createContext({
+    sessionStorage: { getItem(key) { return storage.get(key) ?? null; }, setItem(key, value) { storage.set(key, value); }, removeItem(key) { storage.delete(key); } },
     document: {
       querySelector(selector) {
         if (selector === '#main') return main;
         if (selector === '#toast') return toast;
         if (selector === '#match-results') return main.innerHTML.includes('id="match-results"') ? results : null;
+        if (selector === '#traveler-question-list') return main.innerHTML.includes('id="traveler-question-list"') ? questions : null;
         return new Element();
       },
       createElement: () => new Element(),
@@ -61,9 +65,16 @@ function harness(hash = '#home', respond = () => undefined) {
       return { ok: true, json: async () => result ?? (path === '/api/catalog' ? { tours: catalog() } : {}) };
     },
   });
+  vm.runInContext(operatorSource, context);
+  vm.runInContext(editorialSource, context);
   vm.runInContext(source, context);
   return {
-    main, results, location, calls,
+    main, results, questions, location, calls, state: vm.runInContext('state', context),
+    async inputCheckout(values, tourId = 'charyn') {
+      const form = new Form('checkout-form', values, { tour: tourId });
+      const target = { name: 'name', closest(selector) { return selector === '#checkout-form' ? form : null; } };
+      for (const callback of handlers.get('input') || []) await callback({ target });
+    },
     async ready() { await tick(); },
     async navigate(next) { location.hash = next; await vm.runInContext('render()', context); },
     async submit(id, values, dataset) {
@@ -157,4 +168,132 @@ test('a stale catalog response cannot change the price submitted from an already
   await app.submit('checkout-form', { name: 'Alex Demo', email: 'alex@example.com', acceptedTerms: 'on' }, { tour: 'charyn' });
   assert.equal(submitted.quotedPrice, 58000, 'Submission must use the price shown in the checkout');
   assert.equal(submitted.catalogVersion, 1, 'Submission must use the terms version shown in the checkout');
+});
+
+
+test('checkout details survive navigating away and returning without losing unchanged consent', async () => {
+  const app = harness('#checkout/charyn');
+  await app.ready();
+  await app.inputCheckout({name:'Taylor Demo',email:'taylor@example.com',acceptedTerms:'on'});
+  await app.navigate('#home');
+  await app.navigate('#checkout/charyn');
+  assert.match(app.main.innerHTML, /name="name"[^>]*value="Taylor Demo"/);
+  assert.match(app.main.innerHTML, /name="email"[^>]*value="taylor@example.com"/);
+  assert.match(app.main.innerHTML, /name="acceptedTerms"[^>]*checked/);
+});
+
+test('checkout restores a synthetic draft after a page reload but drops consent for changed terms', async () => {
+  const storage = new Map();
+  const app = harness('#checkout/charyn', () => undefined, storage);
+  await app.ready();
+  await app.inputCheckout({name:'Taylor Demo',email:'taylor@example.com',acceptedTerms:'on'});
+  const changed = catalog();
+  changed[0].version = 2;
+  changed[0].price = 65000;
+  const reloaded = harness('#checkout/charyn', path => path === '/api/catalog' ? {tours:changed} : undefined, storage);
+  await reloaded.ready();
+  assert.match(reloaded.main.innerHTML, /name="name"[^>]*value="Taylor Demo"/);
+  assert.match(reloaded.main.innerHTML, /65,000 KZT/);
+  assert.doesNotMatch(reloaded.main.innerHTML, /name="acceptedTerms"[^>]*checked/);
+});
+
+test('changing party size keeps traveler details and requires consent to the new total', async () => {
+  const app = harness('#checkout/charyn');
+  await app.ready();
+  await app.inputCheckout({name:'Taylor Demo',email:'taylor@example.com',acceptedTerms:'on'});
+  await app.navigate('#tour/charyn');
+  await app.submit('departure-form',{departureId:'charyn-2026-11-07',party:'3'},{tour:'charyn'});
+  await app.navigate('#checkout/charyn');
+  assert.match(app.main.innerHTML, /name="name"[^>]*value="Taylor Demo"/);
+  assert.match(app.main.innerHTML, /174,000 KZT/);
+  assert.doesNotMatch(app.main.innerHTML, /name="acceptedTerms"[^>]*checked/);
+});
+
+test('tour questions use the private session API and escape the operator answer', async () => {
+  const app = harness('#tour/charyn', path => path.startsWith('/api/questions?')
+    ? {questions:[{id:'q1',body:'Can I bring a walking aid?',answer:'Yes, check <terrain> first.'}]}
+    : path === '/api/questions' ? {question:{id:'q2'}} : undefined);
+  await app.ready();
+  assert.match(app.main.innerHTML, /data-question-tour="charyn"/);
+  assert.match(app.questions.innerHTML, /Can I bring a walking aid\?/);
+  assert.match(app.questions.innerHTML, /&lt;terrain&gt;/);
+  await app.submit('', {body:'Is there a rest stop?'}, {questionTour:'charyn'});
+  const post = app.calls.find(call => call.path === '/api/questions');
+  assert.equal(post.options.method, 'POST');
+  assert.equal(JSON.parse(post.options.body).tourId, 'charyn');
+  assert.equal(JSON.parse(post.options.body).body, 'Is there a rest stop?');
+});
+
+test('a delayed private question response cannot replace the newer route', async () => {
+  const delayed = deferred();
+  const app = harness('#tour/charyn', path => path.startsWith('/api/questions?') ? delayed.promise : undefined);
+  await app.ready();
+  await app.navigate('#home');
+  const home = app.main.innerHTML;
+  delayed.resolve({questions:[{id:'q1',body:'Old question',answer:null}]});
+  await tick();
+  assert.equal(app.main.innerHTML, home);
+  assert.doesNotMatch(app.questions.innerHTML, /Old question/);
+});
+
+test('match dates come from current catalog departures', async () => {
+  const shifted = catalog();
+  for (const tour of shifted) for (const [index, departure] of tour.departures.entries())
+    departure.date = index === 0 ? '2027-02-10' : '2027-03-01';
+  const app = harness('#match', path => path === '/api/catalog' ? {tours:shifted} : undefined);
+  await app.ready();
+  assert.match(app.main.innerHTML, /name="startDate"[^>]*value="2027-02-10"/);
+  assert.match(app.main.innerHTML, /name="endDate"[^>]*value="2027-03-03"/);
+});
+
+test('changing departure keeps traveler details and clears prior consent', async () => {
+  const app = harness('#checkout/kolsai');
+  await app.ready();
+  await app.inputCheckout({name:'Taylor Demo',email:'taylor@example.com',acceptedTerms:'on'}, 'kolsai');
+  await app.navigate('#tour/kolsai');
+  await app.submit('departure-form',{departureId:'kolsai-2026-11-14',party:'1'},{tour:'kolsai'});
+  await app.navigate('#checkout/kolsai');
+  assert.match(app.main.innerHTML, /name="name"[^>]*value="Taylor Demo"/);
+  assert.doesNotMatch(app.main.innerHTML, /name="acceptedTerms"[^>]*checked/);
+  assert.match(app.main.innerHTML, /14 November 2026/);
+});
+
+test('unavailable session storage keeps the draft in memory', async () => {
+  const blocked = {get(){throw new Error('blocked');},set(){throw new Error('blocked');},delete(){throw new Error('blocked');}};
+  const app = harness('#checkout/charyn', () => undefined, blocked);
+  await app.ready();
+  await app.inputCheckout({name:'Taylor Demo',email:'taylor@example.com',acceptedTerms:'on'});
+  await app.navigate('#home');
+  await app.navigate('#checkout/charyn');
+  assert.match(app.main.innerHTML, /name="name"[^>]*value="Taylor Demo"/);
+});
+
+test('an old successful checkout cannot erase a newer trip draft or booking key', async () => {
+  const oldResponse = deferred(), newResponse = deferred(), storage = new Map();
+  let bookingRequests = 0;
+  const app = harness('#checkout/charyn', path => path === '/api/bookings'
+    ? (++bookingRequests === 1 ? oldResponse.promise : newResponse.promise) : undefined, storage);
+  await app.ready();
+  await app.inputCheckout({name:'Charyn Demo',email:'charyn@example.com',acceptedTerms:'on'});
+  const oldSubmit = app.submit('checkout-form', {name:'Charyn Demo',email:'charyn@example.com',acceptedTerms:'on'}, {tour:'charyn'});
+  await tick();
+  await app.navigate('#checkout/kolsai');
+  await app.inputCheckout({name:'Kolsai Demo',email:'kolsai@example.com',acceptedTerms:'on'}, 'kolsai');
+  const newSubmit = app.submit('checkout-form', {name:'Kolsai Demo',email:'kolsai@example.com',acceptedTerms:'on'}, {tour:'kolsai'});
+  await tick();
+  const requests = app.calls.filter(call => call.path === '/api/bookings').map(call => JSON.parse(call.options.body));
+  assert.equal(requests.length, 2);
+  assert.notEqual(requests[0].idempotencyKey, requests[1].idempotencyKey);
+  const newKey = app.state.bookingKey;
+  oldResponse.resolve({booking:{id:'old-charyn'}});
+  await oldSubmit;
+  assert.equal(app.location.hash, '#checkout/kolsai');
+  assert.equal(app.state.bookingKey, newKey);
+  assert.equal(app.state.checkoutDraft.name, 'Kolsai Demo');
+  assert.equal(JSON.parse(storage.get('qazaqpass.checkoutDraft.v1')).name, 'Kolsai Demo');
+  assert.equal(app.state.checkoutDraft.consentKey, app.state.checkoutReviewKey);
+  newResponse.resolve({booking:{id:'new-kolsai'}});
+  await newSubmit;
+  assert.equal(app.location.hash, 'payment/new-kolsai');
+  assert.equal(storage.has('qazaqpass.checkoutDraft.v1'), false);
 });
