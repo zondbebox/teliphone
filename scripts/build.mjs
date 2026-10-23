@@ -11,7 +11,7 @@ for (const relative of ['server.mjs', 'lib/catalog.mjs', 'lib/store.mjs', 'publi
     process.exit(1);
   }
 }
-for (const relative of ['public/index.html', 'public/styles.css', 'public/operator.css', 'public/editorial.css']) {
+for (const relative of ['public/index.html', 'public/styles.css', 'public/operator.css', 'public/editorial.css', 'public/typography.css']) {
   if (!existsSync(resolve(root, relative)) || !readFileSync(resolve(root, relative), 'utf8').trim()) {
     throw new Error(`Missing or empty application asset: ${relative}`);
   }
@@ -21,5 +21,5 @@ mkdirSync(target, { recursive: true });
 for (const relative of ['public', 'lib', 'scripts', 'server.mjs', 'package.json', 'package-lock.json']) {
   cpSync(resolve(root, relative), resolve(target, relative), { recursive: true });
 }
-writeFileSync(resolve(target, 'BUILD.txt'), 'Samal Journeys local demonstration bundle. Run node server.mjs here. No public deployment or real payment integration.\n');
+writeFileSync(resolve(target, 'BUILD.txt'), 'Samal Journey local demonstration bundle. Run node server.mjs here. No public deployment or real payment integration.\n');
 console.log('Build passed: syntax checked; runnable local bundle written to dist/. Browser behavior is verified separately.');
