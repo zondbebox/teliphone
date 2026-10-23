@@ -1,0 +1,90 @@
+{
+  "origin": "https://samal-journey.burger1223333.chatgpt.site",
+  "flow": "Tour → two travelers → checkout → simulated success → Passport → reload",
+  "confirmed": true,
+  "totalKZT": 116000,
+  "truncated": false,
+  "requests": [
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/favicon.ico",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/favicon.ico",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/favicon.ico",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/favicon.ico",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/styles.css",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/operator.css",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/editorial.css",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/typography.css",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/hosted.css",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/hosted-runtime.js",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/operator.js",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/editorial.js",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/app.js",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/fonts/DMSans-Variable.ttf",
+      "hasPostData": false
+    },
+    {
+      "method": "GET",
+      "url": "https://samal-journey.burger1223333.chatgpt.site/favicon.ico",
+      "hasPostData": false
+    }
+  ],
+  "consoleErrors": []
+}

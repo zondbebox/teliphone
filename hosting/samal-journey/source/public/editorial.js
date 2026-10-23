@@ -1,0 +1,69 @@
+/* Original editorial presentation. Shared app helpers are available when called. */
+const destinationImages = {
+  charyn: {src:'/images/charyn-canyon.jpg', alt:'Rock formations in Charyn Canyon, Kazakhstan', note:'The canyon, in its own time.'},
+  kolsai: {src:'/images/kolsai-lake.jpg', alt:'Kolsai Lake between forested mountains in Kazakhstan', note:'Leave room for a lakeside pause.'},
+  turkestan: {src:'/images/turkestan-yasawi.jpg', alt:'Mausoleum of Khoja Ahmed Yasawi with blue domes in Turkistan', note:'Look closer. There is a story here.'},
+  burabay: {src:'/images/burabay-pines.jpg', alt:'Pine trees overlooking a lake in Burabay National Park', note:'Take the slower path.'}
+};
+let editorialMood = 'all';
+function destinationPhoto(t, hero=false) {
+  const image=destinationImages[t?.id];
+  return image ? '<img src="'+image.src+'" alt="'+image.alt+'" '+(hero?'fetchpriority="high"':'loading="lazy"')+' decoding="async">' :
+    '<div class="photo-placeholder"><span>'+icon('pin')+'</span><p>'+esc(t?.region||t?.title||'A new destination')+'</p><small>Photograph to be added</small></div>';
+}
+function moodBar() {
+  return '<div class="mood-bar" role="group" aria-label="Choose your travel mood"><span>A little more...</span>'+
+    [['all','Whatever calls to you'],['nature','Into the wild'],['culture','Stories & architecture']].map(function(pair){
+      return '<button type="button" class="mood-pill" data-mood="'+pair[0]+'" aria-pressed="'+(editorialMood===pair[0])+'">'+pair[1]+'</button>';
+    }).join('')+'</div>';
+}
+function editorialCard(t, matched=false) {
+  const link='#tour/'+esc(t.id)+(matched?'?departure='+esc(t.departures[0].id)+'&party='+state.matchParty:'');
+  const departure=t.departures.find(function(d){return d.available>0&&d.date>=new Date().toISOString().slice(0,10);});
+  const note=destinationImages[t.id]?.note||'A new story, thoughtfully planned.';
+  return '<article class="tour-card editorial-card"><a class="tour-image-link" href="'+link+'" aria-label="Explore '+esc(shortTitle(t))+'"><div class="card-image">'+destinationPhoto(t)+
+    '<span class="card-tag">'+t.days+' days · '+esc(t.city)+'</span></div></a><div class="card-body"><p class="guide-note">'+esc(note)+'</p><div class="tour-kicker">'+esc(t.region)+' <span>·</span> '+esc(titleCase(t.difficulty))+' pace</div><h3><a href="'+link+'">'+esc(shortTitle(t))+'</a></h3><p class="card-story">'+esc(t.highlights?.[0]||t.description)+'</p><div class="card-price"><div><strong>'+money(t.price)+'</strong><small>per traveler · sample price</small></div><a class="arrow-link" href="'+link+'" aria-label="View '+esc(shortTitle(t))+'">'+icon('diagonal')+'</a></div><p class="departure-note">'+(departure?date(departure.date)+' · '+departure.available+' demo places':'No available demo departure')+'</p></div></article>';
+}
+function tourStream() {
+  const tours=state.tours.filter(function(t){return editorialMood==='all'||t.interests.includes(editorialMood);});
+  return tours.length ? '<div class="tour-stream">'+tours.map(function(t){return editorialCard(t);}).join('')+'</div>' :
+    '<div class="empty"><h3>A new chapter is still being written.</h3><p>There are no demo tours in this mood yet. Choose another mood.</p></div>';
+}
+function renderEditorialHome() {
+  const canyon=tourById('charyn')||state.tours[0],lake=tourById('kolsai'),culture=tourById('turkestan');
+  if(!canyon){main.innerHTML='<div class="empty"><h1>A new journey is taking shape.</h1><a href="#operator">Open operator workspace</a></div>';return;}
+  main.innerHTML='<div class="container editorial-home"><section class="editorial-hero"><div class="editorial-hero-copy"><span class="eyebrow"><span class="tiny-sun" aria-hidden="true">✳</span> Kazakhstan, a little closer</span><h1>Some journeys stay <em>with you.</em></h1><p>We believe the best part of travel is how a place makes you feel. So we leave room for quiet paths, curious conversations, and the details that make a journey yours.</p><div class="actions"><a class="button" href="#tours">Find your next story '+icon('diagonal')+'</a><a class="text-link" href="#journal">A little about our approach</a></div><div class="hero-signoff"><span class="hand-note">Go a little deeper.</span><span>Small-group journeys<br>across Kazakhstan</span></div></div><div class="photo-collage" aria-label="A glimpse of Kazakhstan"><figure class="collage-main">'+destinationPhoto(canyon,true)+'<figcaption>01 / The wide-open wonder of Charyn</figcaption></figure><figure class="collage-square">'+destinationPhoto(culture||canyon)+'<figcaption>Stories in every stone.</figcaption></figure><figure class="collage-landscape">'+destinationPhoto(lake||canyon)+'<figcaption>And room to simply be.</figcaption></figure><span class="collage-note hand-note">A few places<br>worth getting lost in.</span><svg class="journey-doodle" viewBox="0 0 150 100" fill="none" aria-hidden="true"><path d="M5 20c60-35 130 5 80 35S20 20 115 78m-14-16 16 18 13-18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div></section><section class="editorial-intro"><p>Less rushing.<br><em>More remembering.</em></p><div>From pine-scented trails to turquoise lakes and centuries-old courtyards, our journeys begin with a sense of place.<br><a class="text-link" href="#tour/'+esc(canyon.id)+'">And a clear picture of every detail '+icon('arrow')+'</a></div><span class="round-stamp" aria-hidden="true">THOUGHTFULLY<br>PUT TOGETHER<br><b>✳</b></span></section><section class="journey-section" aria-labelledby="journey-heading"><div class="section-head"><div><span class="eyebrow">The journey collection</span><h2 id="journey-heading">What are you <em>in the mood for?</em></h2></div><p>No two places feel the same.<br>Find the one that speaks to you.</p></div><div id="tour-feed">'+moodBar()+tourStream()+'</div><div class="collection-footer"><span>Real places. Sample tours and departures.</span><a class="text-link" href="#match">Match a journey to my dates '+icon('arrow')+'</a></div></section>'+travelPhilosophy()+'<section class="truth-editorial"><span class="eyebrow">Peace of mind is part of the journey</span><h2>A little less guesswork. <em>A lot more looking forward.</em></h2><div class="truth-promises"><article><span>01</span><h3>The details, together.</h3><p>Inclusions, extras, pace and cancellation terms in one Trip Truth Card.</p></article><article><span>02</span><h3>A person can answer.</h3><p>Ask about the things that matter to you. Read the operator’s reply in your own browser.</p></article><article><span>03</span><h3>Your plans, close by.</h3><p>Keep the itinerary, meeting notes and guide assignment in your Trip Passport.</p></article></div><a class="button secondary" href="#tour/'+esc(canyon.id)+'">Take a look at a Trip Truth Card '+icon('diagonal')+'</a></section></div>';
+}
+function travelPhilosophy() {
+  return '<section class="field-journal" id="journal" aria-label="Our travel philosophy"><div class="journal-photo">'+destinationPhoto(tourById('burabay')||state.tours[0])+'<span class="journal-caption">Field notes / Burabay, Kazakhstan</span></div><div class="journal-page"><span class="eyebrow">A note from our travel journal</span><span class="quote-mark" aria-hidden="true">“</span><blockquote>Not every moment<br>needs an itinerary.<br><em>Some just need<br>a little room.</em></blockquote><p>We like journeys with a sense of curiosity. Time to notice the light through the pines. To ask one more question. To come home with a story that feels like your own.</p><span class="hand-note">That’s the way we’d like to travel.</span><small>Our philosophy · not a traveler testimonial</small></div></section>';
+}
+function renderEditorialTours() {
+  main.innerHTML='<div class="container editorial-collection"><div class="page-top"><span class="eyebrow">The journey collection</span><h1>A change of scene. <em>A different feeling.</em></h1><p class="muted space-top">Choose a mood, then explore the details. All departures and prices are demonstration records.</p></div><section class="section"><div id="tour-feed">'+moodBar()+tourStream()+'</div><div class="collection-footer"><p>Every journey starts in the city shown.<br>Flights and transfers between starting cities are not included.</p><a href="#match" class="button secondary">Find a trip for my dates '+icon('arrow')+'</a></div></section></div>';
+}
+function renderEditorialStory() {
+  main.innerHTML='<div class="container"><div class="page-top story-heading"><span class="eyebrow">Our approach</span><h1>Go gently. <em>Look a little closer.</em></h1></div>'+travelPhilosophy()+'<div class="story-end"><p>Samal Journey brings a sense of wonder together with a clear understanding of the trip. This is a working demonstration for the fictional Saryarqa Routes company; every tour arrangement needs operator review before a real journey.</p><a class="button" href="#tours">Explore the collection '+icon('arrow')+'</a></div></div>';
+}
+function renderCredits() {
+  const credits=[
+    ['charyn','Charyn Canyon','Bgag','CC0','https://commons.wikimedia.org/wiki/File:Charyn_Canyon,_Kazakhstan_02.jpg','https://creativecommons.org/publicdomain/zero/1.0/'],
+    ['kolsai','Kolsai Lake','Katariyakartikey','CC0','https://commons.wikimedia.org/wiki/File:Kolsai_lake.jpg','https://creativecommons.org/publicdomain/zero/1.0/'],
+    ['turkestan','Mausoleum of Khoja Ahmed Yasawi','Adam Harangozó','CC BY-SA 4.0','https://commons.wikimedia.org/wiki/File:Mausoleum_of_Khoja_Ahmed_Yasawi.jpg','https://creativecommons.org/licenses/by-sa/4.0/'],
+    ['burabay','Lake and pines, Burabay','Denis Nelubin','CC BY-SA 4.0','https://commons.wikimedia.org/wiki/File:%D0%92%D0%B8%D0%B4_%D0%BD%D0%B0_%D0%BE%D0%B7%D0%B5%D1%80%D0%BE_%D0%91%D0%BE%D1%80%D0%BE%D0%B2%D0%BE%D0%B5_%D1%81%D0%B2%D0%BE%D0%B7%D1%8C_%D1%81%D0%BE%D1%81%D0%BD%D1%8B.jpg','https://creativecommons.org/licenses/by-sa/4.0/']
+  ];
+  main.innerHTML='<div class="container narrow"><div class="page-top"><span class="eyebrow">The people behind the pictures</span><h1>Places, honestly <em>photographed.</em></h1><p class="muted space-top">These are real photographs of Kazakhstan. No filters, image effects or generated scenery. Images are unmodified; the page frames may crop their visible area.</p></div><section class="credits-list">'+credits.map(function(c){return '<article><div>'+destinationPhoto({id:c[0]})+'</div><section><h2>'+esc(c[1])+'</h2><p>Photograph by '+esc(c[2])+'</p><a href="'+c[4]+'" target="_blank" rel="noopener noreferrer">Original photograph ↗</a><br><a href="'+c[5]+'" target="_blank" rel="noopener noreferrer">'+c[3]+' license ↗</a></section></article>';}).join('')+'</section><p class="small-text muted space-bottom">Photographs sourced from Wikimedia Commons. Source URLs, download details and license notices are retained in assets/attribution.md. Fonts are self-hosted under their included Open Font Licenses.</p></div>';
+}
+function renderDemoGuide() {
+  const tour=tourById('charyn')||state.tours[0];
+  const departure=tour?.departures.find(function(d){return d.available>=2&&d.date>=new Date().toISOString().slice(0,10);});
+  const tourLink=tour?'#tour/'+tour.id+(departure?'?departure='+departure.id+'&party=2':''):'#tours';
+  main.innerHTML='<div class="container narrow demo-guide"><div class="page-top"><span class="eyebrow">A short walk through Samal Journey</span><h1>One journey. <em>Both sides of the story.</em></h1><p class="muted space-top">A 2–3 minute presentation using synthetic details. The traveler and operator views use the same local application.</p></div><ol class="demo-steps"><li><span>01 / Explore</span><h2>Start with the truth.</h2><p>Open '+esc(tour?.title||'a tour')+', review the Trip Truth Card and choose '+(departure?date(departure.date):'an available future departure')+' for two travelers.</p><a class="button" href="'+tourLink+'">Open the demonstration tour '+icon('arrow')+'</a></li><li><span>02 / Ask</span><h2>A question, then an answer.</h2><p>Ask “Can the walking route include rest stops?” in the tour’s question form. Open the operator inbox, answer with a clearly marked demo response, then return to see the saved answer.</p><a class="text-link" href="#operator/inbox">Open the operator inbox '+icon('arrow')+'</a></li><li><span>03 / Book</span><h2>Carry the details forward.</h2><p>Use Alex Demo and alex@example.com. Review the total, try a declined or pending payment, then simulate success. Only success confirms the demonstration booking.</p><p class="notice">No real booking, charge, email or supplier contact occurs.</p></li><li><span>04 / Prepare</span><h2>Put a name to the journey.</h2><p>Assign Demo Guide A in the operator workspace. Return to the traveler’s Trip Passport and refresh to see the assignment and event timeline.</p><div class="actions"><a class="button secondary" href="#operator/bookings">Operator bookings</a><a class="text-link" href="#passport">My Trip Passport '+icon('arrow')+'</a></div></li></ol><section class="panel demo-reset-note"><h3>Ready for another presentation?</h3><p>Stop the presentation server, run <code>npm run demo:reset</code>, then <code>npm run demo</code>. The reset backs up only the dedicated presentation data and refuses while its server is running. Ordinary demo bookings are kept separate.</p><p class="small-text muted">The operator’s default local access code is <code>local-demo-only</code>. This is demonstration access, not production authentication. Real users and team approval have not been invented.</p></section></div>';
+}
+document.addEventListener('click',function(event){
+  const button=event.target.closest('button[data-mood]');
+  if(!button)return;
+  editorialMood=button.dataset.mood;
+  const feed=document.querySelector('#tour-feed');
+  if(!feed)return;
+  feed.innerHTML=moodBar()+tourStream();
+  feed.querySelector('[data-mood="'+editorialMood+'"]')?.focus({preventScroll:true});
+});

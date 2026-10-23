@@ -2,6 +2,14 @@
 
 An English, AI-assisted working package for ZERTTEX Hackathon 2026, Stage 1, Case 1. The fictional operator's trips are presented through one versioned **Trip Truth Card**, then a validated local booking journey. This is a reviewable demonstration, not a production travel service or an approved competition submission.
 
+## Public demo
+
+[Open Samal Journey](https://samal-journey.burger1223333.chatgpt.site) — public access, no account required. This static browser-session version stays available without the local computer. Each visitor can explore tours, simulate bookings/payments and try their own operator sandbox. It sends no booking or inquiry data to an operator or backend.
+
+The localhost server below remains separate. The public version uses synthetic data only; it does not provide real bookings, payments, shared operational records or production authentication. Enter `local-demo-only` in the operator sandbox. AI disclosure and team review requirements remain visible in About.
+
+[Hosted source and reproduction](hosting/samal-journey/README.md) · [Publication and browser verification](hosting/verification/README.md). Run `npm run test:hosted` to build and test the hosted adapter; `npm run build:hosted` generates its static assets. Root `npm test` runs the original localhost suite explicitly so a fresh checkout does not attempt to import unbuilt hosted output.
+
 ## Latest review package
 
 The current product name is **Samal Journey**, for **Saryarqa Routes**. The website uses locally hosted DM Sans. Existing storage keys, routes and package identifiers remain compatible.

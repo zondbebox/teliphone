@@ -1,0 +1,222 @@
+{
+  "source": [
+    {
+      "path": "browser-bootstrap.js",
+      "sha256": "bcfa8b39c0e14a1760718aa5031800e16bf4ddc47e7d8564661c00616dfcac4e"
+    },
+    {
+      "path": "credits/attribution.md",
+      "sha256": "b49d589cdcbc965d0b9fef35854216cb572323f05748df081fde559104763bb4"
+    },
+    {
+      "path": "credits/fonts.md",
+      "sha256": "8826cf05150c64ff6a3c4c483d1aab4c94bff024dbac4218c67502278c385fd1"
+    },
+    {
+      "path": "demo-api.mjs",
+      "sha256": "499ab606fc74a328eb7f88baf47bf03c34df41528c924de667cb2845b737de5a"
+    },
+    {
+      "path": "domain/catalog.mjs",
+      "sha256": "810f6d8e5abf6ca1b3d955b2d2e188db16c2f99350141ccfdfc35736400e3ec8"
+    },
+    {
+      "path": "domain/store.mjs",
+      "sha256": "380fb3746a98bdbd637e74a79acc2f65a4acf3e9588c3caa27caacc77d816461"
+    },
+    {
+      "path": "hosted-about.txt",
+      "sha256": "639fb7956fa821db0358047b681e188fc29d4d02f0714eefa9040665c600afd9"
+    },
+    {
+      "path": "hosted.css",
+      "sha256": "679fded59c1d46ebe98937287deb4daded3d4c3c5dd88409df2fdaff2246f82b"
+    },
+    {
+      "path": "public/app.js",
+      "sha256": "11b498e8da7813ebdc7c49ca67f7b886b0a7ecb98753129a083291cbb3612aa6"
+    },
+    {
+      "path": "public/editorial.css",
+      "sha256": "6c277c20aa7640766e7c2985fa3fcc0f670e3f6314266e65eae7bfe70b9cf77a"
+    },
+    {
+      "path": "public/editorial.js",
+      "sha256": "d4a652b32156e08e2ca9479c1ce1a026bd4ec5ebf9597c210f93016b58cf169a"
+    },
+    {
+      "path": "public/fonts/Caveat-OFL.txt",
+      "sha256": "b586491304b9bde2b1f6cc96f8110ad9d4e559595121ff58e31c976c4143f3bc"
+    },
+    {
+      "path": "public/fonts/Caveat-Variable.ttf",
+      "sha256": "0bdb6b660482d31531b3945849fba5916b3ef8695da7024a9e6b9ee3c4157988"
+    },
+    {
+      "path": "public/fonts/DMSans-OFL.txt",
+      "sha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1"
+    },
+    {
+      "path": "public/fonts/DMSans-Variable.ttf",
+      "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d"
+    },
+    {
+      "path": "public/fonts/DMSerifDisplay-Italic.ttf",
+      "sha256": "df74c0ac387baeaeb0fe4f2324e1668e6a3ed8c09cd9796fe162c71753e19e45"
+    },
+    {
+      "path": "public/fonts/DMSerifDisplay-OFL.txt",
+      "sha256": "a3e5cdd67d4571dd0a24fcc968de0efde7ae97ef752daf0906e4767619dd7231"
+    },
+    {
+      "path": "public/fonts/DMSerifDisplay-Regular.ttf",
+      "sha256": "8cc3643535edf039aa5d95440a8542735e9197e4f4b8d9303e980fefbf5ab616"
+    },
+    {
+      "path": "public/fonts/Manrope-OFL.txt",
+      "sha256": "2e9a4958fb8e5be69eca9abc48544e1ca1898ca71edc54ac3da25cd93101881e"
+    },
+    {
+      "path": "public/fonts/Manrope-Variable.ttf",
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6"
+    },
+    {
+      "path": "public/images/burabay-pines.jpg",
+      "sha256": "b4bdd0f78a1abc425905e2cb17dbff41ea48d27ace510c930b0dbe0214604fda"
+    },
+    {
+      "path": "public/images/charyn-canyon.jpg",
+      "sha256": "1276ff4b067b4f97f520e2b40d5d7f0ea6b8c084ba229883fd4ca857b07550f4"
+    },
+    {
+      "path": "public/images/kolsai-lake.jpg",
+      "sha256": "0501a647ab0a3286996987e993f9b580acc7107290a43ce8cdbdd71473434d69"
+    },
+    {
+      "path": "public/images/turkestan-yasawi.jpg",
+      "sha256": "5d18731b9af932dfd732fb2b2ca7fdd48ec0248fbc25d67413fc50b9555f94a7"
+    },
+    {
+      "path": "public/index.html",
+      "sha256": "ad1497be56ccb9d55fdee1c3f934993bfaa729897752bb9ca43a140a1a1ea8ff"
+    },
+    {
+      "path": "public/operator.css",
+      "sha256": "6b78a6028e51e61f898b6900241c4fedf4f0cdf2c0a98e8330d318e9a9a91884"
+    },
+    {
+      "path": "public/operator.js",
+      "sha256": "dc763800678073a00005bd5ce03782e3d3c4de5852a716d58c7768761ab555db"
+    },
+    {
+      "path": "public/styles.css",
+      "sha256": "71156b6339e324f876c5d776b3a1d25abab83684f5e046d35bee049a1c9a80ef"
+    },
+    {
+      "path": "public/typography.css",
+      "sha256": "1321c1a5183f629b7bd996663ec5d26a766a5524b65f249fcda476964177f2fd"
+    }
+  ],
+  "output": [
+    {
+      "path": "app.js",
+      "sha256": "25935e10dfe6bb1c2b950572829b7d821d8050543f283687e4d6d5f681046a0d"
+    },
+    {
+      "path": "credits/attribution.md",
+      "sha256": "b49d589cdcbc965d0b9fef35854216cb572323f05748df081fde559104763bb4"
+    },
+    {
+      "path": "credits/fonts.md",
+      "sha256": "8826cf05150c64ff6a3c4c483d1aab4c94bff024dbac4218c67502278c385fd1"
+    },
+    {
+      "path": "editorial.css",
+      "sha256": "6c277c20aa7640766e7c2985fa3fcc0f670e3f6314266e65eae7bfe70b9cf77a"
+    },
+    {
+      "path": "editorial.js",
+      "sha256": "6c88cee437549fae934fb971473dc029e390695d88c5b959b74a9626cd449c29"
+    },
+    {
+      "path": "fonts/Caveat-OFL.txt",
+      "sha256": "b586491304b9bde2b1f6cc96f8110ad9d4e559595121ff58e31c976c4143f3bc"
+    },
+    {
+      "path": "fonts/Caveat-Variable.ttf",
+      "sha256": "0bdb6b660482d31531b3945849fba5916b3ef8695da7024a9e6b9ee3c4157988"
+    },
+    {
+      "path": "fonts/DMSans-OFL.txt",
+      "sha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1"
+    },
+    {
+      "path": "fonts/DMSans-Variable.ttf",
+      "sha256": "8cd08d97e89c24d0aa92edd2f0f4c8ee6195eee9b7c9f154865a58b02f0c1c0d"
+    },
+    {
+      "path": "fonts/DMSerifDisplay-Italic.ttf",
+      "sha256": "df74c0ac387baeaeb0fe4f2324e1668e6a3ed8c09cd9796fe162c71753e19e45"
+    },
+    {
+      "path": "fonts/DMSerifDisplay-OFL.txt",
+      "sha256": "a3e5cdd67d4571dd0a24fcc968de0efde7ae97ef752daf0906e4767619dd7231"
+    },
+    {
+      "path": "fonts/DMSerifDisplay-Regular.ttf",
+      "sha256": "8cc3643535edf039aa5d95440a8542735e9197e4f4b8d9303e980fefbf5ab616"
+    },
+    {
+      "path": "fonts/Manrope-OFL.txt",
+      "sha256": "2e9a4958fb8e5be69eca9abc48544e1ca1898ca71edc54ac3da25cd93101881e"
+    },
+    {
+      "path": "fonts/Manrope-Variable.ttf",
+      "sha256": "3ae11c49db0455a3cc33e37d380f20fdb8c7f8b41dc07625c177e3d87a9d6ae6"
+    },
+    {
+      "path": "hosted-runtime.js",
+      "sha256": "94ca3748f8a7767d19a7531dd4bf2e476b63a08814dda7a954798bdba6be267d"
+    },
+    {
+      "path": "hosted.css",
+      "sha256": "679fded59c1d46ebe98937287deb4daded3d4c3c5dd88409df2fdaff2246f82b"
+    },
+    {
+      "path": "images/burabay-pines.jpg",
+      "sha256": "b4bdd0f78a1abc425905e2cb17dbff41ea48d27ace510c930b0dbe0214604fda"
+    },
+    {
+      "path": "images/charyn-canyon.jpg",
+      "sha256": "1276ff4b067b4f97f520e2b40d5d7f0ea6b8c084ba229883fd4ca857b07550f4"
+    },
+    {
+      "path": "images/kolsai-lake.jpg",
+      "sha256": "0501a647ab0a3286996987e993f9b580acc7107290a43ce8cdbdd71473434d69"
+    },
+    {
+      "path": "images/turkestan-yasawi.jpg",
+      "sha256": "5d18731b9af932dfd732fb2b2ca7fdd48ec0248fbc25d67413fc50b9555f94a7"
+    },
+    {
+      "path": "index.html",
+      "sha256": "8520165f58882332401bff42fb4cc9faad007b04267c5e119730a073d60da007"
+    },
+    {
+      "path": "operator.css",
+      "sha256": "6b78a6028e51e61f898b6900241c4fedf4f0cdf2c0a98e8330d318e9a9a91884"
+    },
+    {
+      "path": "operator.js",
+      "sha256": "1ad5e8435221ed6a0c71aad947a43746b4bbe6a72830d7cd38ee552e68e0403a"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "71156b6339e324f876c5d776b3a1d25abab83684f5e046d35bee049a1c9a80ef"
+    },
+    {
+      "path": "typography.css",
+      "sha256": "1321c1a5183f629b7bd996663ec5d26a766a5524b65f249fcda476964177f2fd"
+    }
+  ]
+}

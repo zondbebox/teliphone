@@ -1,0 +1,218 @@
+/* Samal Journey: one readable type system across traveler and operator views. */
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/DMSans-Variable.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+:root {
+  --font-text: 'DM Sans', Arial, sans-serif;
+  --type-display: clamp(2.125rem, 1.5rem + 3vw, 4.25rem);
+  --type-page: clamp(2rem, 1.4rem + 2.5vw, 3.5rem);
+  --type-section: clamp(1.625rem, 1.2rem + 1.5vw, 2.75rem);
+  --type-card: clamp(1.3125rem, 1.2rem + .5vw, 1.5625rem);
+  --type-body: 1.0625rem;
+  --type-control: 1rem;
+  --type-meta: .9375rem;
+  --type-caption: .8125rem;
+  --type-price: clamp(1.375rem, 1.25rem + .5vw, 1.75rem);
+  --weight-body: 400;
+  --weight-label: 500;
+  --weight-heading: 600;
+  --weight-strong: 700;
+  --leading-body: 1.65;
+  --leading-heading: 1.18;
+  --leading-control: 1.4;
+  --tracking-body: normal;
+  --tracking-heading: -.018em;
+}
+body, .operator-workspace, .operator-login {
+  font-family: var(--font-text);
+  font-size: var(--type-body);
+  font-weight: var(--weight-body);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
+  font-optical-sizing: auto;
+}
+button, input, select, textarea { font: inherit; }
+h1,h2,h3,h4,h5,blockquote {
+  font-family: var(--font-text);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+h1 { font-size: var(--type-page); }
+h2 { font-size: var(--type-section); }
+h3,h4,h5 { font-size: var(--type-card); line-height: 1.3; }
+h1 em,h2 em,h3 em,blockquote em,.editorial-intro em,.op-login-aside em {
+  font-style: normal;
+  font-weight: inherit;
+}
+p { text-wrap: pretty; }
+strong,b { font-weight: var(--weight-strong); }
+small { font-size: var(--type-meta); }
+.editorial-hero h1 { font-size: var(--type-display); max-width: 12ch; }
+.editorial-hero { min-height: 0; padding-top: 2rem; }
+.editorial-hero-copy>p { max-width: 49ch; margin: 1.5rem 0; }
+.editorial-hero .actions>.text-link { max-width: 14rem; }
+.editorial-intro>p { font-size: var(--type-section); line-height: 1.25; }
+.editorial-intro>div { max-width: 60ch; }
+.journey-section>.section-head>p { max-width: 32ch; }
+.journal-page blockquote { font-size: var(--type-section); line-height: 1.28; }
+.journal-page>p { max-width: 60ch; }
+.story-end { text-align: left; max-width: 65ch; }
+.about-copy p,.detail-section>p,.form-heading p,.page-top>p,.demo-steps p { max-width: 65ch; }
+.hand-note,.guide-note,.mood-bar>span {
+  font-size: var(--type-body); font-weight: var(--weight-label); line-height: 1.5;
+}
+.collage-main figcaption { left: 32%; text-align: right; }
+.collage-note { font-size: var(--type-meta); max-width: 11ch; }
+.hero-signoff { align-items: flex-start; flex-wrap: wrap; gap: 1rem; }
+.hero-signoff>span:last-child { font-size: var(--type-meta); }
+.eyebrow,.op-kicker,.tour-kicker,.demo-steps>li>span,.op-tour-index,.op-editor-intro>span {
+  font-size: var(--type-meta); font-weight: var(--weight-label); line-height: 1.5;
+}
+.eyebrow { margin-bottom: 1rem; }
+.tiny-sun { font-size: 1.25rem; }
+.brand { letter-spacing: normal; line-height: 1.2; }
+.brand-wordmark { align-items: flex-start; }
+.brand-name { font-size: 1.875rem; font-weight: var(--weight-heading); letter-spacing: -.025em; }
+.brand-descriptor { font-size: var(--type-meta); font-weight: var(--weight-label); margin: .125rem 0 0; padding: 0; }
+.brand-company { font-size: .875rem; line-height: 1.4; margin-top: .2rem; }
+.site-header nav a:not(.button),.mobile-navigation { font-size: var(--type-meta); font-weight: var(--weight-label); }
+.site-header nav a { min-height: 44px; display: inline-flex; align-items: center; }
+.demo-strip { font-size: var(--type-caption); line-height: 1.5; padding-block: .5rem; }
+.button,.button.small,.mood-pill,.op-primary,.op-text-button,.op-topbar button {
+  font-size: var(--type-control); font-weight: var(--weight-label);
+  line-height: var(--leading-control); min-height: 44px; letter-spacing: normal;
+}
+.button { text-align: center; }
+.button .icon { flex: none; }
+.text-link { font-size: var(--type-control); line-height: 1.5; }
+.actions>.text-link,.collection-footer>.text-link,.op-back { display: inline-flex; align-items: center; min-height: 44px; }
+.card-body h3,.truth-promises h3,.op-inquiry h3 { font-size: var(--type-card); font-weight: var(--weight-heading); }
+.card-price strong,.booking-box .price,.truth-price,.op-tour-price {
+  font-size: var(--type-price); font-weight: var(--weight-heading); line-height: 1.35;
+  letter-spacing: normal; font-variant-numeric: tabular-nums; white-space: normal;
+}
+.card-price strong,.op-tour-price { white-space: nowrap; }
+.card-price small,.booking-box .price small,.truth-price small,.op-tour-price small {
+  font-size: var(--type-meta); font-weight: var(--weight-body); line-height: 1.6; white-space: normal;
+}
+.total-row { align-items: baseline; flex-wrap: wrap; font-size: var(--type-control); }
+.total-row strong { font-size: 1.25rem; font-weight: var(--weight-heading); white-space: nowrap; }
+.card-tag,.departure-note,.card-meta,.collection-footer,.small-text,.pill,.breadcrumb,.stepper,
+.quick-facts span,.truth-title p,.booking-box>p,.notice,.timeline small,.booking-list-item p,
+.op-small,.op-sidebar-note,.op-booking-meta,.op-field,.op-tour-content p,.op-tour-bottom,
+.op-footnote,.op-editor-intro p,.op-existing-departure small,.op-editor-actions p,.op-status,
+.op-static-questions,.op-static-questions p,.op-static-questions>div,.op-topbar>div {
+  font-size: var(--type-meta); line-height: 1.6;
+}
+.quick-facts strong,.truth-columns h3,.booking-box h3,.itinerary strong {
+  font-size: var(--type-control); font-weight: var(--weight-heading);
+}
+.clean-list li,.truth-note,.truth-note p,.check-label,.timeline li,.summary-line,.itinerary li,
+.question-section p,.traveler-question>strong,.traveler-question>p,.op-answer p,.op-empty p,
+.op-section-head p,.op-editor-head p,.op-login-panel>p,.op-static-questions summary {
+  font-size: var(--type-control); line-height: var(--leading-body);
+}
+.itinerary li:before { font-size: var(--type-caption); line-height: 1; }
+.field>span,.field>label,.op-checks legend { font-size: var(--type-meta); font-weight: var(--weight-label); }
+.field input,.field select,.field textarea,.op-field input,.op-field select,.op-field textarea {
+  font-size: var(--type-control); font-weight: var(--weight-body); line-height: 1.5; min-height: 48px;
+}
+.check-label,.op-checks label { min-height: 44px; align-items: center; }
+.error,.op-flash { font-size: var(--type-control); line-height: 1.6; }
+.truth-title { flex-wrap: wrap; }
+.truth-title>* { min-width: 0; }
+.truth-price { max-width: 100%; }
+.truth-note strong { font-weight: var(--weight-heading); }
+.checkout-summary .truth-note { max-height: none; overflow: visible; }
+.passport-top h2,.compact-heading,.question-section h2,.traveler-questions h2,.op-inbox-group>h3 {
+  font-size: var(--type-section);
+}
+.passport-top .eyebrow { color: #e7eddf; }
+.passport-body .truth-title { flex-direction: column; }
+.photo-collage figure { padding-bottom: 3.25rem; }
+.photo-collage figcaption { font-size: var(--type-caption); line-height: 1.35; bottom: .5rem; color: #515a49; }
+.photo-caption,.photo-caption small,.journal-caption { font-size: var(--type-meta); line-height: 1.4; background: var(--paper); }
+.photo-caption { max-width: calc(100% - 2.5rem); }
+.journal-page small { font-size: var(--type-meta); color: #58604f; }
+.quote-mark { font-size: 3rem; line-height: 1; margin: 1rem 0; }
+.round-stamp { font-size: .75rem; line-height: 1.35; letter-spacing: normal; }
+.round-stamp b { font-size: 1.5rem; }
+.truth-promises article>span { font-size: 1.5rem; font-weight: var(--weight-label); }
+.truth-promises article { min-width: 0; }
+.op-wordmark { font-size: 1.25rem; font-weight: var(--weight-heading); }
+.op-wordmark span { font-size: var(--type-meta); }
+.op-sidebar>div>p,.op-login-aside p { font-size: var(--type-section); line-height: 1.25; }
+.op-sidebar nav a,.op-mobile-tabs a { font-size: var(--type-control); font-weight: var(--weight-label); min-height: 44px; }
+.op-sidebar nav a span,.op-mobile-tabs a span,.op-inbox-group>h3 small { font-size: var(--type-meta); }
+.op-section-head h2,.op-editor-head h2 { font-size: var(--type-section); }
+.op-login-panel h1 { font-size: var(--type-page); }
+.op-login-panel { max-width: 680px; }
+.op-large-count { font-size: 3rem; line-height: 1; color: #67765d; }
+.op-login-symbol { font-size: 5rem; line-height: 1; }
+.op-editor-intro h3 { font-size: var(--type-card); }
+.op-answer span { font-size: var(--type-meta); font-weight: var(--weight-heading); }
+.op-existing-departure strong,.op-checks label { font-size: var(--type-control); }
+.op-back { font-size: var(--type-control); font-weight: var(--weight-label); }
+.op-status { white-space: normal; font-weight: var(--weight-label); }
+footer { font-size: var(--type-meta); line-height: 1.65; }
+.footer-brand { font-size: 1.5rem; font-weight: var(--weight-heading); letter-spacing: normal; }
+footer a { display: inline-flex; align-items: center; min-height: 44px; }
+#toast { font-size: var(--type-control); line-height: 1.6; max-width: calc(100vw - 3rem); }
+@media (max-width: 1000px) {
+  .editorial-hero { grid-template-columns: 1fr; }
+  .editorial-hero-copy { max-width: 65ch; }
+  .photo-collage { max-width: 580px; width: 100%; justify-self: center; }
+  .field-journal { grid-template-columns: 1fr; }
+  .journal-photo { height: 380px; margin-right: 1.5rem; }
+  .journal-page { margin: -2rem 0 0 1.5rem; min-height: 0; }
+  .truth-promises { flex-wrap: wrap; }
+  .truth-promises article { flex-basis: 14rem; }
+}
+@media (max-width: 600px) {
+  .container { padding-inline: 1.375rem; }
+  .site-header { padding: 1rem 1.375rem; gap: .75rem; }
+  .brand-name { font-size: 1.625rem; }
+  .site-header .button { padding: .625rem .75rem; gap: .5rem; }
+  .site-header .button span { display: none; }
+  .mobile-navigation { padding: 0 1.375rem .5rem; gap: .25rem .75rem; }
+  .mobile-navigation a { padding: .625rem .25rem; }
+  .editorial-hero { padding-top: 1.25rem; }
+  .editorial-hero-copy>p { margin-block: 1.25rem; }
+  .editorial-hero .actions { gap: .75rem; }
+  .editorial-hero .actions>.text-link { max-width: none; }
+  .editorial-intro { padding: 1.5rem; }
+  .mood-pill { padding: .625rem .875rem; }
+  .truth-title { flex-direction: column; }
+  .truth-card,.booking-box,.panel { padding: 1.25rem; }
+  .booking-box form { grid-template-columns: 1fr; }
+  .quick-facts { padding: 1rem; grid-template-columns: 1fr 1fr; }
+  .stepper { grid-template-columns: 1fr 1fr; font-size: .875rem; }
+  .summary-line { flex-wrap: wrap; gap: .25rem 1rem; }
+  .journal-page { padding: 1.5rem; }
+  .journal-caption { right: 1rem; }
+  .op-main { padding-inline: 1.375rem; }
+  .op-mobile-tabs { margin-inline: -1.375rem; padding-inline: 1.375rem; gap: .5rem 1rem; flex-wrap: wrap; overflow-x: visible; }
+  .op-booking,.op-inquiry,.op-tour-card { padding: 1.25rem; }
+  .op-topbar { height: auto; min-height: 72px; flex-wrap: wrap; padding-block: .75rem; }
+  .op-login-panel { padding-inline: 1.375rem; }
+  .op-login-panel .op-small { font-size: var(--type-meta); }
+}
+@media (max-width: 350px) {
+  .container,.site-header { padding-inline: 1.25rem; }
+  .brand svg { display: none; }
+  .mobile-navigation { padding-inline: 1.25rem; gap: .25rem .5rem; }
+  .quick-facts { grid-template-columns: 1fr; }
+}
+@media print {
+  .passport-top .eyebrow { color: #1c1f22; }
+  body { font-size: 10pt; line-height: 1.5; }
+  h1 { font-size: 22pt; } h2 { font-size: 18pt; } h3 { font-size: 13pt; }
+  .small-text,.clean-list li,.truth-note,.timeline li,.timeline small { font-size: 10pt; }
+}

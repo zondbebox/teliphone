@@ -1,0 +1,6 @@
+/* Only the hosted-session notice/reset affordance differs from the source design. */
+.demo-strip.hosted-demo-strip{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:.35rem 1rem;padding:.65rem 1rem;line-height:1.5}
+.hosted-demo-strip .hosted-reset{font:inherit;color:inherit;background:transparent;border:0;border-bottom:1px solid currentColor;padding:.15rem .1rem;cursor:pointer;min-height:36px}
+.hosted-reset:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+@media(max-width:600px){.demo-strip.hosted-demo-strip{font-size:.875rem;text-align:center}.hosted-demo-strip .hosted-reset{min-height:44px}}
+@media print{.hosted-demo-strip{display:none!important}}

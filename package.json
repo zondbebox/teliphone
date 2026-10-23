@@ -8,10 +8,12 @@
   },
   "scripts": {
     "start": "node server.mjs",
-    "test": "node --test",
+    "test": "node --test tests/*.test.mjs",
     "check": "node --check server.mjs && node --check public/app.js && node --check public/operator.js && node --check public/editorial.js && node --check scripts/demo.mjs",
     "build": "node scripts/build.mjs",
     "demo": "node scripts/demo.mjs",
-    "demo:reset": "node scripts/demo.mjs reset"
+    "demo:reset": "node scripts/demo.mjs reset",
+    "test:hosted": "npm --prefix hosting/samal-journey test",
+    "build:hosted": "npm --prefix hosting/samal-journey run build"
   }
 }
