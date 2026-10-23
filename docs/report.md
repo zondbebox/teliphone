@@ -1,12 +1,14 @@
 <!-- Report page 1; main content -->
 
-# QazaqPass Technology Product Proposal
+# Samal Journeys
+
+Technology Product Proposal for Saryarqa Routes
 
 ZERTTEX Hackathon 2026  |  TeamName placeholder  |  23 October 2026
 
 ## Problem and Market
 
-AI-assisted working draft for substantive team review. QazaqPass is a proposed browser application for Saryarqa Routes that connects tour matching, transparent trip information, booking and operator follow-up. The recommended pilot is a narrow India-resident segment; commercial demand, user benefit and production readiness remain unproven.
+AI-assisted working draft for substantive team review. Samal Journeys is a proposed browser application for Saryarqa Routes that connects tour matching, transparent trip information, booking and operator follow-up. The recommended pilot is a narrow India-resident segment; commercial demand, user benefit and production readiness remain unproven.
 
 ### Company and problem
 
@@ -36,7 +38,7 @@ For this proposed English-booking segment, the Russian-only page and message-bas
 
 ## Existing Solutions and Product
 
-QazaqPass should be assessed against configuring existing tools. The following vendor evidence identifies useful capabilities and unresolved fit, not proven competitor weaknesses. [S04-S05]
+Samal Journeys should be assessed against configuring existing tools. The following vendor evidence identifies useful capabilities and unresolved fit, not proven competitor weaknesses. [S04-S05]
 
 | Dimension | Viator marketplace | Bokun operator software |
 | --- | --- | --- |
@@ -51,7 +53,7 @@ No USD-to-KZT conversion is assumed. During weeks 1-2, test whether a configured
 
 The Trip Truth Card is one structured, operator-controlled record of itinerary, departure/meeting details, price, inclusions, exclusions, physical demands, cancellation terms and content status. Matching, checkout and the Trip Passport reuse it. The proposed benefit is fewer contradictory promises; no conversion increase or unprecedented invention is claimed.
 
-![Figure 1. Trip Truth Card excerpt from a genuine local browser capture. Prices, dates and policies are demonstration data.](../assets/screenshots/report-truth-card.png)
+![Figure 1. Samal Journeys Trip Truth Card in the running local application. Price, dates and policies are demonstration data. Genuine browser capture, 23 October 2026.](../assets/screenshots/samal/desktop-truth-card.png)
 
 
 ---
@@ -63,11 +65,11 @@ The Trip Truth Card is one structured, operator-controlled record of itinerary, 
 
 ![Figure 2. Proposed integrated user flow. The payment step is a local simulation.](../assets/flow.png)
 
-The five capabilities are catalog matching, Trip Truth Card, guided booking, Trip Passport and operator workspace. A traveler enters dates, party size, budget, starting city, interests and difficulty; only compatible catalog departures are recommended. The same card feeds departure selection, synthetic details and total review. A confirmed simulation creates a reference and Passport; pending, declined and cancelled outcomes remain separate. Operator controls support catalog, capacity, guide status and follow-up. Prices and eligibility are deterministic; unanswered questions need a person, not an invented itinerary or certification.
+The five capabilities are catalog matching, Trip Truth Card, guided booking, Trip Passport and operator workspace. Matching uses dates, party size, budget, city, interests and difficulty to return compatible departures. Checkout preserves traveler drafts when navigating or reloading, and requests fresh consent when accepted terms change. Only simulated success confirms a Passport; pending, declined and cancelled remain distinct. Operators can author tours, edit content and future capacity, assign guides and answer private traveler questions. The Passport preserves accepted price and policy snapshots after catalog edits. Answers come from the operator; the product does not invent itinerary details or credentials.
 
 ### Demonstration and production boundary
 
-The supporting prototype uses Node 24.16, plain HTML/CSS/JavaScript and persistent local JSON with no npm dependencies, paid service or API key. It is a local demonstration, not the finished 12-week pilot. It has no live AI, live payment integration or service worker. Matching is rule based. Tour-specific prices, dates, capacity and policies are synthetic; guide assignment remains a recorded state, not an invented credential. Demo operator access is not suitable for public exposure.
+The local prototype uses Node 24.16, HTML/CSS/JavaScript and persistent JSON, with no npm dependencies or API key. It has no live AI, real payments or service worker. Its dedicated presentation mode seeds future dates and can reset its own backed-up store. The warm editorial interface uses local fonts, licensed destination photographs without effects and responsive navigation. Tour prices, policies, capacity and traveler records are synthetic; guide assignment records a state, not a verified credential. Demo operator access is unsuitable for public exposure.
 
 The planned production system retains one application and catalog/booking model, with transactional storage, durable reservation holds, authenticated operator roles, audit events, backups and a hosted checkout. Personal data should be minimized; no card number or passport is needed in this demonstration. Production retention, consent and customer terms require operator and legal review. No compliance certification is claimed.
 
@@ -102,7 +104,7 @@ No interviews or surveys have been conducted. Recruit ten India-resident adults 
 
 Ask participants to find a suitable departure, state two exclusions and the full KZT party charge, explain cancellation, complete a demo booking, recover from a decline and distinguish pending from confirmed. Proposed thresholds: at least 8/10 unassisted core completions, 9/10 correct price/exclusions, and 10/10 correct safety-critical payment-state interpretation. These are decision gates, not results. Report true numerators and denominators; a small formative sample cannot establish conversion uplift.
 
-Agent-driven browser checks covered desktop 1440, mobile 360 and tablet 768 layouts, with no horizontal checkout overflow. A two-person Charyn booking retained its 116,000 KZT total across checkout/passport; decline, pending, cancellation, success, reload persistence, guide assignment and no-match recovery were exercised. A three-person Burabay match preserved dates and the 144,000 KZT total, with a confirmed mobile demo booking also observed. Keyboard focus was visible and the console had no errors/warnings. Twenty automated tests passed: 14 HTTP, five UI regression and one font-serving test. These are software checks, not real-user evidence; see docs/verification.md.
+Agent-driven Chrome checks exercised 1440, 768 and 360px layouts, mood filters, new-tour authoring/matching, private question and answer persistence, guide assignment and booking recovery. A three-person Charyn booking retained its accepted 174,000 KZT total after the catalog price and cancellation policy changed. Checkout drafts survived navigation/reload and required renewed consent. Declined, pending and confirmed states were visibly distinct. Keyboard focus was visible and the final warning/error log was empty. All 42 automated tests passed. Review and regression checks fixed stale checkout responses, multiline input, departure limits and the live party total on the Truth Card. These are software checks, not user research; see docs/full-demo-verification.md and docs/samal-verification.md.
 
 
 ---
@@ -203,7 +205,7 @@ All external pages below were opened on 23 October 2026, before the case deadlin
 
 [S10] Halyk ePay. Transaction status [English translation]. Publication: Not stated on opened page. Data: Live API documentation observed 2026-10-23. https://epayment.kz/docs/check-status-payment
 
-Figure 1 is a genuine local application capture. The prototype's Charyn Canyon photograph is by Bgag, photographed 22 September 2023, Wikimedia Commons, CC0 1.0. Attribution and destination check: assets/attribution.md. Figure 2 is an AI-assisted project flow diagram, not external evidence.
+Figure 1 is a genuine Samal Journeys local application capture. The prototype's Charyn Canyon photograph is by Bgag, photographed 22 September 2023, Wikimedia Commons, CC0 1.0. Attribution and destination check: assets/attribution.md. Figure 2 is an AI-assisted project flow diagram, not external evidence.
 
 Image source: https://commons.wikimedia.org/wiki/File:Charyn_Canyon,_Kazakhstan_02.jpg | License: https://creativecommons.org/publicdomain/zero/1.0/deed.en | Opened 23 October 2026.
 
@@ -215,17 +217,17 @@ Image source: https://commons.wikimedia.org/wiki/File:Charyn_Canyon,_Kazakhstan_
 
 ## AI Declaration
 
-This is an AI-assisted working draft requiring substantive human authorship review. The supplied QazaqPass concept and brief were developed with ChatGPT assistance. Codex materially assisted the evidence search and interpretation, product and technical refinement, application code and tests, financial model, document writing, formatting and verification work. This assistance is substantially more than grammar correction.
+This is an AI-assisted working draft requiring substantive human authorship review. The supplied product concept and brief were developed with ChatGPT assistance. The user selected the Samal Journeys name; Codex applied the brand and refreshed the demo and supporting artifacts. Codex materially assisted the evidence search and interpretation, product and technical refinement, application code and tests, financial model, document writing, formatting and verification work. This assistance is substantially more than grammar correction.
 
 ### Actual assistance and its limits
 
 | Capability | Contribution | Limit |
 | --- | --- | --- |
-| Codex and Superpowers skills | Requirements, bounded implementation planning, debugging and verification workflow. | Decisions remain proposals until team-owned analysis and revision. |
+| Codex and Superpowers skills | Requirements, implementation planning, parallel AI review, debugging and verification. | Decisions remain proposals until team-owned analysis and revision. |
 | Web research tools | Opened government, airline, vendor and provider pages and recorded sources. | AI source checks do not replace the case requirement that the team verify sources itself. |
-| Local engineering and browser tools | Runnable local prototype, synthetic booking checks and genuine interface capture. | No production payment, live AI, real booking or real-user study. |
+| Local engineering and browser tools | Local demo, tour authoring, private questions, regression checks and genuine browser captures. | No production payment, live AI, real booking or real-user study. |
 | Spreadsheets capability | Editable workbook and reproducible 24-month base/downside calculations. | Inputs remain planning assumptions, not observed financial results. |
-| Documents and PDF skills | English source, editable DOCX and an independently rendered PDF. | PDF pages visually inspected. DOCX pagination unverified: packaged renderer lacks LibreOffice. |
+| Documents and PDF skills | Updated English report, editable Word document and independently rendered PDF. | PDF pages visually inspected. DOCX pagination unverified: packaged renderer lacks LibreOffice. |
 | GitHub and authorized Git tools | Repository inspection and authorized delivery workflow, reported separately. | No deployment or competition submission is authorized by a repository push. |
 
 Product Design and Context7 integrations were not available in this session and are not claimed as used. No additional service was installed to replace them. The selected dependency-free Node implementation does not imply consultation of those unavailable tools. The final verification log is the record of commands and checks actually executed; no participant responses or team approvals have been invented.

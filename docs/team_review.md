@@ -2,14 +2,14 @@
 
 **Status: AI-assisted working draft, not an approved competition submission.** Prepared on 23 October 2026. Case deadline: 25 October 2026 at 23:59 Astana time. `TeamName` is a filename placeholder, not the product name or a verified team name.
 
-The supplied briefs describe the QazaqPass concept as developed with ChatGPT assistance. Codex has also materially assisted research interpretation and drafting, rather than merely correcting grammar. The final AI Declaration must reflect all actual coding, calculations, design and document work recorded in the package. Do not list unavailable tools as used.
+The supplied briefs describe the original QazaqPass concept as developed with ChatGPT assistance. The user selected Samal Journeys as the product name; Saryarqa Routes remains the fictional company from the case. Codex has also materially assisted research interpretation and drafting, rather than merely correcting grammar. The final AI Declaration must reflect all actual coding, calculations, design and document work recorded in the package. Do not list unavailable tools as used.
 
 ## What was supplied and what remains provisional
 
 | Item | Provenance/status | Team action |
 | --- | --- | --- |
 | Saryarqa Routes company snapshot and case tasks | Fictional case facts, read in full | Preserve exactly; verify against case |
-| QazaqPass name, five capabilities and Trip Truth Card | Existing supplied concept/brief, already AI-assisted | Establish team-owned reasoning and revisions, not rubber-stamp approval |
+| Samal Journeys product name; five capabilities and Trip Truth Card | User-selected rename of the original AI-assisted QazaqPass brief | Establish team-owned reasoning and revisions, not rubber-stamp approval |
 | India-resident English-comfortable nature-travel segment | AI-proposed selection based on opened evidence | Accept, revise or reject with substantive rationale |
 | Almaty departure operation | Proposed operating assumption | Operator verifies guides, vehicles, meeting point and supplier arrangements |
 | Demo prices, dates, policies and capacity | Synthetic demonstration data | Replace/approve for any pilot; no real offerings implied |

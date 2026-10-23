@@ -1,4 +1,6 @@
-# QazaqPass financial model
+# Samal Journeys financial model
+
+Samal Journeys is the proposed digital product for the fictional case operator **Saryarqa Routes**.
 
 This is an AI-assisted planning draft for substantive team and operator review. All forecast demand, conversion, margin, capacity and cost inputs are estimates. Company facts are preserved from the supplied `Zertex_Case1_Technology_Product.pdf`, pages 1–2. The main task read and visually inspected all three original pages. This does not claim that team members have reviewed or approved the assumptions.
 
@@ -12,6 +14,8 @@ node finance/test_model.mjs
 ```
 
 To regenerate the editable workbook, use the bundled workspace Node runtime and `@oai/artifact-tool` package, then run `node finance/build_workbook.mjs`. The authoring package is an environment capability, not an application dependency. The local `finance/node_modules` junction points to that bundled runtime and must remain untracked. Workbook rendering and formula checks run as part of the builder. Do not install similarly named packages from an unknown source.
+
+The current workbook is `Samal_Journeys_Financial_Model.xlsx`. Its warm paper, pine and terracotta styling matches the Samal Journeys presentation; blue editable inputs and green linked formulas retain standard financial-model cues. The rebrand preserves the canonical inputs, formulas and forecast outputs.
 
 The workbook is editable for exploration. Its changes do not automatically write back to JSON. Apply approved assumptions to `inputs.json` and regenerate the outputs before updating the report, so JSON, CSV and XLSX remain one reproducible model.
 
@@ -39,6 +43,6 @@ Before expanding, the operator should verify the actual contribution per complet
 
 ## Verification
 
-The deterministic checks independently reconcile cash totals, unit margin, cost ceiling, annual foreign-share denominators, exact downside treatment, payback crossing, all monthly capacity bounds, zero demand and capacity constraints. The workbook builder checks both live selector values against the deterministic model and changes a late-period traffic input to verify recalculation and the seat cap. `workbook_verification.json` records formula checks and limitations. Workbook sheets are rendered to PNG and visually inspected. Native Microsoft Excel desktop recalculation is not claimed.
+The deterministic checks independently reconcile cash totals, unit margin, cost ceiling, annual foreign-share denominators, exact downside treatment, payback crossing, all monthly capacity bounds, zero demand and capacity constraints. The workbook builder checks both live selector values against the deterministic model and changes a late-period traffic input to verify recalculation and the seat cap. `workbook_verification.json` records formula checks and limitations. Workbook sheets are rendered to PNG and visually inspected. Native Microsoft Excel desktop recalculation is not claimed. The Samal Journeys refresh additionally compared every populated cell against the previous workbook: all values and formulas were preserved except the authorized brand and company label. `brand_verification.json` records the unchanged canonical-file fingerprints and visual checks.
 
 Expected results are projections. Fractional monthly counts are retained to avoid distorting the exact downside. The AI-use declaration and official eligibility, authorship and competition-rule review remain team responsibilities.

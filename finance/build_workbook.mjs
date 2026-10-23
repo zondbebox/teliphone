@@ -10,23 +10,32 @@ const wb = Workbook.create();
 const summary = wb.worksheets.add('Summary');
 const assumptions = wb.worksheets.add('Assumptions');
 const flow = wb.worksheets.add('Monthly cash flow');
-const navy='#163A46', teal='#2F6F72', blue='#1F57B8', green='#147446';
+const pine='#284C3E', olive='#6E7A5C', terracotta='#AD6249', paper='#FDFBF7', blue='#1F57B8', green='#147446';
 const money='#,##0;(#,##0);"–"', count='#,##0.0;(#,##0.0);"–"';
 for(const s of [summary,assumptions,flow]) {
   s.showGridLines=false;
   s.getRange('A1:B110').format.columnWidth=2.2;
-  s.getRange('C1:AA110').format.font={name:'Arial',size:10,color:'#182D35'};
+  s.getRange('C1:AA110').format.font={name:'Arial',size:10,color:'#1C1F22'};
   s.getRange('C1:AA110').format.rowHeight=21;
   s.getRange('C1:AA110').format.verticalAlignment='center';
   s.getRange('C1:C110').format.columnWidth=47;
   s.getRange('D1:AA110').format.columnWidth=16;
-  s.getRange('C2').format.font={name:'Arial',size:15,bold:true,color:navy};
+  s.getRange('C2').format.font={name:'Arial',size:15,bold:true,color:pine};
   s.getRange('C4').values=[['Case selected']];
-  s.getRange('D4').format={font:{color:green,bold:true},fill:'#E7F0EF',horizontalAlignment:'center',borders:{preset:'outside',style:'dotted',color:teal}};
+  s.getRange('D4').format={font:{color:green,bold:true},fill:'#EDF0E8',horizontalAlignment:'center',borders:{preset:'outside',style:'dotted',color:olive}};
   if(s!==assumptions)s.getRange('D4').formulas=[["=Assumptions!D4"]];
 }
-summary.tabColor=navy;assumptions.tabColor=teal;
-summary.getRange('C2').values=[['QazaqPass financial outlook']];
+summary.tabColor=pine;assumptions.tabColor=olive;
+summary.getRange('C2:F39').format.fill=paper;
+assumptions.getRange('C2:I100').format.fill=paper;
+flow.getRange('C2:AA47').format.fill=paper;
+for(const sheet of [summary,assumptions,flow]) {
+  sheet.getRange('C2:F2').format.borders={bottom:{style:'thin',color:terracotta}};
+  sheet.getRange('D4').format.fill='#EDF0E8';
+}
+summary.getRange('C2').values=[['Samal Journeys financial outlook']];
+summary.getRange('C3').values=[['A digital product for Saryarqa Routes']];
+summary.getRange('C3').format.font.color=olive;
 assumptions.getRange('C2').values=[['Forecast assumptions']];
 flow.getRange('C2').values=[['Monthly incremental cash flow (KZT)']];
 flow.freezePanes.freezeRows(8);flow.freezePanes.freezeColumns(3);
@@ -34,8 +43,8 @@ assumptions.freezePanes.freezeRows(4);
 
 function value(s,address,v){s.getRange(address).values=[[v]];}
 function formula(s,address,v){s.getRange(address).formulas=[[v]];s.getRange(address).format.font.color=v.includes('!')?green:'#000000';}
-function header(s,address){s.getRange(address).format={fill:navy,font:{bold:true,color:'#FFFFFF'},horizontalAlignment:'center',borders:{bottom:{style:'thin',color:'#FFFFFF'}}};}
-function total(s,address){s.getRange(address).format={font:{bold:true},borders:{top:{style:'thin',color:'#9CAFB3'}}};}
+function header(s,address){s.getRange(address).format={fill:pine,font:{bold:true,color:'#FFFFFF'},horizontalAlignment:'center',borders:{bottom:{style:'thin',color:'#FFFFFF'}}};}
+function total(s,address){s.getRange(address).format={font:{bold:true},borders:{top:{style:'thin',color:'#CDBDA8'}}};}
 value(assumptions,'D4','Base');
 assumptions.getRange('D4').dataValidation={rule:{type:'list',values:['Base','Downside']}};
 value(assumptions,'C7','Active completed-traveler multiplier');
@@ -151,7 +160,7 @@ value(summary,'C28','Headroom against strict Y1 gross ceiling');formula(summary,
 value(summary,'C29','Case revenue less travelers x stated price');formula(summary,'D29','=Assumptions!D25-Assumptions!D24*Assumptions!D12');
 value(summary,'C30','New Y2 travelers required for 30% share');formula(summary,'D30','=(Assumptions!D27*Assumptions!D24-Assumptions!D23)/(Assumptions!D16-Assumptions!D27)');
 summary.getRange('D28:D29').setNumberFormat(money);summary.getRange('D30').setNumberFormat(count);
-summary.getRange('D8:F30').format.font.color='#182D35';
+summary.getRange('D8:F30').format.font.color='#1C1F22';
 summary.getRange('F20:F22').format.horizontalAlignment='right';
 for(const r of [10,15,17,18,22])total(summary,`C${r}:F${r}`);
 summary.getRange('D28').conditionalFormats.add('cellIs',{operator:'lessThan',formula:0,format:{fill:'#FBE4E1',font:{color:'#A53832',bold:true}}});
@@ -188,5 +197,5 @@ console.log((await wb.inspect({kind:'table',range:'Summary!C7:F30',include:'valu
 for(const [sheetName,range,name]of [['Summary','C2:F39','summary'],['Assumptions','C2:G33','assumptions-drivers'],['Assumptions','C36:F57','assumptions-costs'],['Assumptions','C60:I72','assumptions-monthly'],['Monthly cash flow','C8:I20','monthly-funnel'],['Monthly cash flow','C23:I47','monthly-cash']]){
  const preview=await wb.render({sheetName,range,scale:1.5,format:'png'});await fs.writeFile(path.join(directory,'previews',`${name}.png`),new Uint8Array(await preview.arrayBuffer()));
 }
-const exported=await SpreadsheetFile.exportXlsx(wb);await exported.save(path.join(directory,'QazaqPass_Financial_Model.xlsx'));
+const exported=await SpreadsheetFile.exportXlsx(wb);await exported.save(path.join(directory,'Samal_Journeys_Financial_Model.xlsx'));
 console.log(`Exported editable workbook. ${checks.length} live formula comparisons passed.`);

@@ -1,6 +1,6 @@
 # Self-hosted fonts
 
-Downloaded on **23 October 2026** from the official [Google Fonts repository](https://github.com/google/fonts). These assets are served locally by QazaqPass; opening the app does not request fonts from Google or another third party. No fonts were installed on the operating system.
+Downloaded on **23 October 2026** from the official [Google Fonts repository](https://github.com/google/fonts). These assets are served locally by Samal Journeys; opening the app does not request fonts from Google or another third party. No fonts were installed on the operating system.
 
 ## DM Serif Display
 

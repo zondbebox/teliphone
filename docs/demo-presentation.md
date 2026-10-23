@@ -1,4 +1,4 @@
-# QazaqPass: 2–3 minute local presentation
+# Samal Journeys: 2–3 minute local presentation
 
 Use this with the in-app **Demo guide** at `http://127.0.0.1:3001/#demo`. All names, prices, departures, questions and answers in this walk-through are synthetic. No real booking, charge, email or supplier contact occurs.
 

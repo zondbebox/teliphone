@@ -34,3 +34,7 @@ This section describes the current runnable demo. Its current browser evidence i
 | Presentation script | `docs/demo-presentation.md` follows the in-app Demo guide: review a current tour/date, ask and privately answer a synthetic question, try payment outcomes, then assign a guide and revisit the Passport. It uses the on-screen future dates instead of hardcoded November 2026 dates. |
 
 The same prototype limits still apply: no production authentication, live payment provider, live AI, public deployment, real bookings or supplier contact. No new permission, purchase, external message or competition submission was performed for this extension.
+
+## Samal Journeys refresh
+
+The user selected Samal Journeys as the product name and explicitly reaffirmed Saryarqa Routes as the case company. Website, current report and workbook retain this relationship. Superpowers planning/verification, Browser, Documents/PDF and Spreadsheets skills, bundled runtimes and authorized Git were used. Product Design and Context7 remain unavailable; no installation or new service was added. The canonical economic inputs and outputs are unchanged. Current verification is recorded in `docs/samal-verification.md`. Earlier records and screenshots remain historical evidence and are not relabeled as new captures.

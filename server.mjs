@@ -125,5 +125,5 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
   const port = Number(process.env.PORT || 3000);
   if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('PORT must be between 1 and 65535.');
   const server = createApp({ storePath: process.env.QAZAQPASS_DATA_PATH ? resolve(process.env.QAZAQPASS_DATA_PATH) : undefined });
-  server.listen(port, '127.0.0.1', () => console.log(`QazaqPass demo: http://127.0.0.1:${port} (local only; synthetic bookings and payments)`));
+  server.listen(port, '127.0.0.1', () => console.log(`Samal Journeys demo: http://127.0.0.1:${port} (local only; synthetic bookings and payments)`));
 }

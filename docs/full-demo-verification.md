@@ -1,3 +1,5 @@
+> Historical workflow verification before the Samal Journeys rebrand. Current brand and artifact evidence: [samal-verification.md](samal-verification.md).
+
 # Full demonstration verification — 23 October 2026
 
 This record covers the Organic Editorial and full operator/traveler extension on `codex/qazaqpass`, based on `32a600b`. It supersedes UI/runtime claims in the earlier verification record only where explicitly described below. Evidence was collected from the actual local application, not a generated mockup.

@@ -8,14 +8,25 @@
   "markdown_generated_from_same_content": true,
   "financial_source": "finance/summary.json",
   "canonical_financial_values_found": true,
+  "canonical_financial_values_in_docx": true,
+  "no_legacy_brand_in_final_text": true,
+  "company": "Saryarqa Routes",
+  "company_on_first_page": true,
   "docx_zip_valid": true,
   "docx_reopens": true,
   "docx_embedded_images": 2,
   "docx_tables": 7,
-  "pdf_sha256": "8dfff80cd28549a0532fd1c2d23d3a56a51e2ef008a0c704e2e4fad3f65e1e20",
-  "docx_visual_status": "Unverified: packaged render_docx.py failed with FileNotFoundError: LibreOffice soffice.exe was not found on PATH",
-  "pdf_visual_status": "Passed: all 8 final PDF pages rendered with Poppler at 130 DPI and visually inspected on 2026-10-23; no clipping, overlap, broken figures or unreadable tables observed",
-  "visually_reviewed_pages": [
+  "pdf_sha256": "04ed862ee451343cf7c09e58d51bba6721cc4355ac925dc965c765fff7d8ecbd",
+  "docx_sha256": "b8e891d17498af2ec05421fce9763510a26f9b85625e2cbec306bea4aa55c788",
+  "financial_source_sha256": "20117c2d79edcaa6abca440a56eb95a51b8ee2fec672bf1d71f2695f7c1ada9d",
+  "brand": "Samal Journeys",
+  "current_automated_tests": 42,
+  "latest_screenshot": "assets/screenshots/samal/desktop-truth-card.png",
+  "screenshot_sha256": "699344ad213f0d12868e07c874bb27bd81aee70a2904e55712082c42ff0f6585",
+  "docx_visual_status": "Unverified: fresh packaged render_docx.py attempt failed with FileNotFoundError: LibreOffice soffice.exe was not found on PATH. No DOCX page images or pagination result were produced.",
+  "pdf_visual_status": "All eight pages rendered with bundled Poppler at 110 dpi and individually inspected. No clipped text, overlap, broken tables, missing glyphs or misplaced footers observed.",
+  "page_headings_verified": true,
+  "pdf_visual_pages_reviewed": [
     1,
     2,
     3,
@@ -25,12 +36,22 @@
     7,
     8
   ],
-  "screenshot_source": "assets/screenshots/desktop-tour.png",
-  "screenshot_crop": "assets/screenshots/report-truth-card.png",
-  "screenshot_crop_bounds": [
-    110,
-    252,
-    944,
-    824
-  ]
+  "pdf_render_tool": "bundled Poppler pdftoppm.exe -r 110 -png",
+  "pdf_render_hashes": {
+    "page-1.png": "639f3eae890e7e44c11d38f9c18ffd19a58d63af447306eef74a9d20fd641c0c",
+    "page-2.png": "629bde92d74d8660b737860b98c81375d5839fb9101f852e1ec10e9bfac269b4",
+    "page-3.png": "54e9baecd184238908ff2ee8a81bc6076a5d43b55ac8e27e89c20ccce365cfce",
+    "page-4.png": "18d4eb44a5aba9c2827c0164907701fbc7cc4289ce249ab49dd757620de5d66b",
+    "page-5.png": "af8fd5ccb0129f63ba87ebada753084a620e9197e6f6f55df7e8eedcad6e0a9d",
+    "page-6.png": "d523db0c830357394de653413bae89fcbd3262b007a640f4230db51603b4b506",
+    "page-7.png": "e28508038f3eaf63214432a86b877ec80033f565b39c99fded122c82b11b3928",
+    "page-8.png": "7e45dfd1762534d3d885ed0cfe716ae1a6a79a6c3408e741175bd02ede40d6d8"
+  },
+  "docx_render_attempted": true,
+  "docx_renderer_exit_code": 1,
+  "docx_structure_checked": "Reopened with python-docx; valid OOXML ZIP, 7 tables, 2 embedded figures, financial text agrees with canonical summary; explicit content page breaks do not prove Word pagination.",
+  "pdf_font_family": "DM Serif Display headings with Arial body; fonts embedded",
+  "docx_font_family": "Georgia headings with Arial body, editable Windows fonts",
+  "ai_disclosure_retained": true,
+  "human_team_review": "Pending; no approval or participant research invented"
 }

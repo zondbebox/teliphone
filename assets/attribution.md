@@ -53,4 +53,4 @@ This is an authentic destination photograph, not a photograph of Saryarqa Routes
 - Suggested alt text: **Pine trees overlooking a lake in Burabay National Park.**
 - Suggested visible credit: **Burabay photo: Denis Nelubin / Wikimedia Commons (CC BY-SA 4.0).**
 
-These are authentic destination photographs. They do not depict QazaqPass staff, guests, vehicles, service delivery, or verified company departures.
+These are authentic destination photographs. They do not depict Samal Journeys staff, guests, vehicles, service delivery, or verified company departures.

@@ -21,5 +21,5 @@ mkdirSync(target, { recursive: true });
 for (const relative of ['public', 'lib', 'scripts', 'server.mjs', 'package.json', 'package-lock.json']) {
   cpSync(resolve(root, relative), resolve(target, relative), { recursive: true });
 }
-writeFileSync(resolve(target, 'BUILD.txt'), 'QazaqPass local demonstration bundle. Run node server.mjs here. No public deployment or real payment integration.\n');
+writeFileSync(resolve(target, 'BUILD.txt'), 'Samal Journeys local demonstration bundle. Run node server.mjs here. No public deployment or real payment integration.\n');
 console.log('Build passed: syntax checked; runnable local bundle written to dist/. Browser behavior is verified separately.');

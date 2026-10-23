@@ -34,9 +34,9 @@ Proposed acquisition test: publish operator-approved English destination informa
 
 ## Two relevant platforms
 
-The matrix uses vendors' own materials. It does not constitute independent product testing or a claim that QazaqPass invented transparent tour information.
+The matrix uses vendors' own materials. It does not constitute independent product testing or a claim that Samal Journeys invented transparent tour information.
 
-| Dimension | Viator marketplace [S04] | Bokun operator booking software [S05] | QazaqPass proposal |
+| Dimension | Viator marketplace [S04] | Bokun operator booking software [S05] | Samal Journeys proposal |
 | --- | --- | --- | --- |
 | Journey/discovery | Marketplace distribution and traveler-facing booking | Direct booking widgets plus marketplace/OTA channels | Operator-specific matching through one Trip Truth Card |
 | Transparency | Operator controls listing content; product submission review | Operator configures products, booking options and availability | Explicit inclusions, exclusions, total and unresolved questions reused across screens |

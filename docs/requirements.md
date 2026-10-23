@@ -8,6 +8,8 @@ The case is the source of fictional company facts and case-specific tasks. Its p
 
 The original case was read completely, and all three page images were visually inspected. Source PDF/prompt copies are not included in the public project package.
 
+Current product brand: **Samal Journeys**, a digital product for **Saryarqa Routes**. Original brief filenames and historical Git branches retain their original names for provenance.
+
 ## Mandatory case requirements
 
 | ID | Case source | Requirement | Artifact / evidence | Gate |

@@ -58,7 +58,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1]
       console.error(error.message); process.exitCode = 1;
     });
   } else {
-    startPresentation().then(server => console.log(`QazaqPass presentation: http://127.0.0.1:${server.address().port} (local only; synthetic data)`))
+    startPresentation().then(server => console.log(`Samal Journeys presentation: http://127.0.0.1:${server.address().port} (local only; synthetic data)`))
       .catch(error => { console.error(error.message); process.exitCode = 1; });
   }
 }

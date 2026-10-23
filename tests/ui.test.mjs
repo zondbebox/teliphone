@@ -35,7 +35,7 @@ function harness(hash = '#home', respond = () => undefined, storage = new Map())
   class Form extends Element {
     constructor(id, values, dataset = {}) { super(); this.id = id; this.values = values; this.dataset = dataset; }
   }
-  const main = new Element(), results = new Element(), questions = new Element(), toast = new Element();
+  const main = new Element(), results = new Element(), questions = new Element(), toast = new Element(), liveTotal = new Element(), detailTruthTotal = new Element();
   const handlers = new Map();
   const location = { hash };
   const calls = [];
@@ -45,6 +45,8 @@ function harness(hash = '#home', respond = () => undefined, storage = new Map())
       querySelector(selector) {
         if (selector === '#main') return main;
         if (selector === '#toast') return toast;
+        if (selector === '#live-total') return liveTotal;
+        if (selector === '.detail-content .truth-price small') return detailTruthTotal;
         if (selector === '#match-results') return main.innerHTML.includes('id="match-results"') ? results : null;
         if (selector === '#traveler-question-list') return main.innerHTML.includes('id="traveler-question-list"') ? questions : null;
         return new Element();
@@ -69,7 +71,12 @@ function harness(hash = '#home', respond = () => undefined, storage = new Map())
   vm.runInContext(editorialSource, context);
   vm.runInContext(source, context);
   return {
-    main, results, questions, location, calls, state: vm.runInContext('state', context),
+    main, results, questions, liveTotal, detailTruthTotal, location, calls, state: vm.runInContext('state', context),
+    async inputParty(value, formId = 'departure-form') {
+      const form = new Form(formId, {party:value}, {tour:'charyn'});
+      const target = {name:'party',value,closest(selector){return selector === 'form' || selector === '#'+formId ? form : null;}};
+      for(const callback of handlers.get('input')||[]) await callback({target});
+    },
     async inputCheckout(values, tourId = 'charyn') {
       const form = new Form('checkout-form', values, { tour: tourId });
       const target = { name: 'name', closest(selector) { return selector === '#checkout-form' ? form : null; } };
@@ -296,4 +303,17 @@ test('an old successful checkout cannot erase a newer trip draft or booking key'
   await newSubmit;
   assert.equal(app.location.hash, 'payment/new-kolsai');
   assert.equal(storage.has('qazaqpass.checkoutDraft.v1'), false);
+});
+
+test('changing tour party keeps the Truth Card and booking total consistent without touching other forms', async () => {
+  const app = harness('#tour/charyn');
+  await app.ready();
+  await app.inputParty('2');
+  assert.equal(app.liveTotal.textContent,'116,000 KZT');
+  assert.equal(app.detailTruthTotal.textContent,'per traveler · 116,000 KZT for 2');
+  await app.inputParty('3');
+  assert.equal(app.liveTotal.textContent,'174,000 KZT');
+  assert.equal(app.detailTruthTotal.textContent,'per traveler · 174,000 KZT for 3');
+  await app.inputParty('4','match-form');
+  assert.equal(app.detailTruthTotal.textContent,'per traveler · 174,000 KZT for 3');
 });

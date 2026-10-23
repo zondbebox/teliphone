@@ -6,10 +6,20 @@ import json
 
 root = Path(__file__).resolve().parent
 ns = {'x': 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'}
-with zipfile.ZipFile(root / 'QazaqPass_Financial_Model.xlsx') as z:
+with zipfile.ZipFile(root / 'Samal_Journeys_Financial_Model.xlsx') as z:
+    shared = ET.fromstring(z.read('xl/sharedStrings.xml'))
+    strings = [''.join(node.itertext()) for node in shared]
     sheets = [ET.fromstring(z.read(f'xl/worksheets/sheet{i}.xml')) for i in range(1, 4)]
     cell = lambda sheet, ref: sheet.find(f".//x:c[@r='{ref}']", ns)
     summary, assumptions, monthly = sheets
+    def text_value(c):
+        v = c.find('x:v', ns)
+        if c.attrib.get('t') == 's':
+            return strings[int(v.text)]
+        return v.text if v is not None else ''.join(c.itertext())
+    assert text_value(cell(summary, 'C2')) == 'Samal Journeys financial outlook'
+    assert text_value(cell(summary, 'C3')) == 'A digital product for Saryarqa Routes'
+    assert all('QazaqPass' not in text_value(c) for s in sheets for c in s.findall('.//x:c', ns))
     for address in ['D8', 'E8', 'F18', 'E22', 'D27']:
         assert cell(summary, address).find('x:f', ns) is not None, address
     assert abs(float(cell(summary, 'F18').find('x:v', ns).text) - 261200) < 0.02
@@ -19,4 +29,4 @@ with zipfile.ZipFile(root / 'QazaqPass_Financial_Model.xlsx') as z:
     assert monthly.find('.//x:pane', ns) is not None
     assert all(c.attrib.get('t') != 'e' for s in sheets for c in s.findall('.//x:c', ns))
     assert 'Assumptions!$D$7' in cell(monthly, 'AA17').find('x:f', ns).text
-    print('PASS: saved XLSX contains live summary formulas, expected cached results, a case selector, frozen monthly panes, and no exported error cells.')
+    print('PASS: saved XLSX contains Samal Journeys branding, live summary formulas, expected cached results, a case selector, frozen monthly panes, and no exported error cells.')

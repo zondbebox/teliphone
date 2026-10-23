@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-23",
+  "scope": "Samal Journeys brand, Saryarqa Routes company attribution, and warm paper/pine/terracotta styling. Financial model logic preserved.",
+  "preservation": "Every populated cell value and formula matches the previous workbook, except the authorized brand substitution and company subtitle. All 1,103 numeric/formula cells match exactly. Data validation, worksheet views and conditional formatting match exactly.",
+  "canonical_sha256": {
+    "inputs.json": "f883fcdd65aacbd49cd1c16328726ca6e1d6e20679f0bff9a36f41d6fb21061e",
+    "summary.json": "20117c2d79edcaa6abca440a56eb95a51b8ee2fec672bf1d71f2695f7c1ada9d",
+    "monthly_cash_flows.csv": "f1b3d2e9376839c88dd15e20dc81c317ac57919246484a2c3953b8aec5952d41"
+  },
+  "verification": [
+    "Canonical deterministic model tests passed",
+    "11 live formula comparisons and both payback checks passed",
+    "Both live scenarios and a later-period traffic/capacity perturbation recalculated correctly",
+    "Saved XLSX branding, formulas, cached headline outputs, selector, panes and error scan passed"
+  ],
+  "visually_inspected_previews": [
+    "summary",
+    "assumptions-drivers",
+    "assumptions-costs",
+    "assumptions-monthly",
+    "monthly-funnel",
+    "monthly-cash"
+  ],
+  "limitations": [
+    "Native Microsoft Excel desktop recalculation was not available for verification.",
+    "AI-assisted planning assumptions and competition eligibility still require substantive team/operator review."
+  ]
+}
