@@ -1,0 +1,18 @@
+{
+  "platform": {
+    "fonts": [
+      {
+        "familyName": "DM Sans 9pt",
+        "glyphCount": 27,
+        "isCustomFont": true,
+        "postScriptName": "DMSans-36pt-SemiBold"
+      }
+    ]
+  },
+  "loaded": {
+    "result": {
+      "type": "string",
+      "value": "[{\"family\":\"DM Sans\",\"weight\":\"400 700\",\"status\":\"loaded\"}]"
+    }
+  }
+}

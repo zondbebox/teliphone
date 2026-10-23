@@ -1,0 +1,35 @@
+# Samal Journey: fact-check log
+
+Checked by Codex on 23 October 2026. This is AI verification, not evidence that team members opened sources or developed the analysis. The original report and research files are preserved. The companion [source register](source-verification.csv) records exact titles, dates, units, support and limits for every material external claim in the existing report. All ten cited web sources, two official corroborating pages and the photograph's source page were opened; search snippets alone were not used as verification.
+
+## Corrections for the revised report
+
+| Item | Finding and action |
+| --- | --- |
+| Identity | Use **Samal Journey** for the product and **Saryarqa Routes** for the fictional case company. The singular product name follows the latest user instruction, not the case PDF. |
+| Airline attribution | [Air India's 10 September 2025 announcement](https://www.airindia.com/content/air-india/in/en/newsroom/press-release/Air-India-and-Air-Astana-enter-codeshare-partnership.html) identifies **Air Astana-operated** Almaty–Delhi/Mumbai services. State the operator and retain the regulatory-approval caveat; this is not a current timetable. |
+| Viator citation and fee | Use Jenk Constantine's full title, *How Viator Works: Everything You Need to Know Before Listing Your Experience*, dated 3 June 2025, on the [About Us page](https://operatorresources.viator.com/about-us/). The [supplier FAQ](https://supplier.viator.com/sign-up-info?m=66029) explicitly confirms a non-refundable **29 USD** submission fee per experience and a completed-booking commission whose rate varies. Add this corroborating source as S04a. |
+| Bókun currency precision | The opened [pricing page](https://www.bokun.io/pricing) displays **$49/month + 1.5% for applicable bookings**, with up to five users. It does not explicitly identify the dollar currency in its readable text. Prefer “$49/month as displayed; billing currency and terms to confirm” to the existing unsupported expansion to USD. No exchange conversion belongs in the model. This does not disprove USD billing. |
+
+## Verified evidence and its limits
+
+- **Market figures:** [S01](https://www.gov.kz/memleket/entities/tourism/press/news/details/939940?lang=ru) supports China 127,059, India 91,148 and Germany 24,672 guests in Kazakhstan accommodation for January–September 2024. It is an official government summary citing BNS, not the underlying statistical table. Preserve the existing warning about incomplete residence/nationality definitions, repeat stays and travel purpose. Do not mix these counts with the page's separate border-entry series or call them addressable buyers.
+- **Entry rules:** the [Indian Embassy notice](https://www.indembastana.gov.in/page/kazakhstan-introduced-visa-free-travel-for-citizens-of-india-for-up-to-14-days/) and [Kazakhstan MFA notice](https://www.gov.kz/org/mfa/press/news/details/398648?lang=en) support the stated 14 continuous days and 42 days in 180 for Indian citizens, citing Decree 464 of 7 July 2022. The embassy's 22 October 2026 page update is not an original publication date. Citizenship differs from the proposed segment's residence; individual eligibility and travel-date requirements still need checking.
+- **Payment evidence:** [Halyk's bank page](https://halykbank.kz/business/payment/epay) supports account/application/terminal onboarding and the 3% other-bank-card tariff. [Provider documentation](https://epayment.kz/) supports the described integration options. [Payment-page examples](https://epayment.kz/docs/platezhnaya-stranica) show KZT and English; [refund documentation](https://epayment.kz/docs/vozvrat-chastichnyi-vozvrat) covers full/partial refunds; [status documentation](https://epayment.kz/docs/check-status-payment) distinguishes successful status lookup from transaction state. These sources establish documented capabilities, not a working integration, merchant approval, India-issued-card acceptance or settlement terms. The 3% model input remains an assumption informed by a public tariff.
+- **Photograph:** [the Charyn file page](https://commons.wikimedia.org/wiki/File:Charyn_Canyon,_Kazakhstan_02.jpg) supports Bgag, photograph date 22 September 2023 and CC0 licensing. This is a media-rights reference, not market-statistics evidence.
+
+## Case verification
+
+Read all three pages of the actual supplied [case PDF](C:/Users/Zhanzhol/Downloads/Zertex_Case1_Technology_Product.pdf) using text extraction. SHA-256: `92810B00D25C5403F911282700B594CD0941E6E6B9AC62B4E691584C6B08C7B2`. No discrepancy was found in the existing report's company facts: founding/location, staff/guides, destinations and trip length, 2025 travelers/revenue/average price, approximate domestic share, channels/payment/website, four supplied complaints, 24-month foreign-share goal, or first-year budget (pp.1–2).
+
+The case itself supplies both 150,000,000 KZT revenue and 44,000 KZT average price for 3,400 travelers. Their 400,000 KZT arithmetic difference must remain disclosed rather than “correcting” a case fact. Approximate foreign/domestic baselines derived from the 96% share are calculations, not additional supplied facts.
+
+Confirmed requirements: English; A4; 4–8 content pages; separate References and AI Declaration; Technology Product filename suffix; 25 October 2026, 23:59 Astana deadline (p.1); one target segment/product, roughly 12-week MVP with diagram and 30%-worse scenario (p.2); scoring weights **25/25/20/20/10**, source checks by the team, and substantive team authorship (p.3). The revision counts AI Declaration inside the content limit as requested by the user. Separate Stage 1 Rules and the official AI-use levels are referenced but were not among the identified supplied materials; do not invent a level or certify eligibility/compliance.
+
+## Claims that remain proposals or require other evidence
+
+The selected traveler preferences, commercial superiority, acquisition mix, conversion, seasonality, prices, labor rates, capacity and expected benefits have not become facts through this source check. Keep them labeled as proposals or assumptions. Financial calculations are separately audited against the canonical model in the revision's finance materials. Software-test and browser observations belong to local verification records, not external market evidence or human research.
+
+Team notes contain no completed interviews, human source-verifier names, substantive strategy decision records, official AI classification or final team identity. Retain those gaps. The team must explain its own market/product/financial reasoning, personally check the sources and complete the declaration. No source establishes production readiness, live payments, provider sandbox success, verified guide credentials, partnership agreements or conversion uplift.
+
+This audit did not change commercial assumptions, modify the website or contact anyone. Live vendor pages were checked on the access date; undated publication dates remain explicitly unknown. Final report rendering and the financial audit are separate checks.

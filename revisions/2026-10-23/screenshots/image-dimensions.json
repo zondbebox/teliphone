@@ -1,0 +1,82 @@
+{
+  "after-desktop-truth.png": [
+    1425,
+    990
+  ],
+  "after-desktop.png": [
+    1425,
+    990
+  ],
+  "after-mobile-card.png": [
+    305,
+    763
+  ],
+  "after-mobile-checkout-fields.png": [
+    345,
+    767
+  ],
+  "after-mobile-declined.png": [
+    345,
+    767
+  ],
+  "after-mobile-passport.png": [
+    345,
+    767
+  ],
+  "after-mobile.png": [
+    345,
+    767
+  ],
+  "after-operator-bookings-final-320.png": [
+    305,
+    763
+  ],
+  "after-operator-catalog-320.png": [
+    305,
+    763
+  ],
+  "after-operator-catalog-768.png": [
+    753,
+    784
+  ],
+  "after-operator-editor-320.png": [
+    305,
+    763
+  ],
+  "after-operator-editor-768.png": [
+    753,
+    784
+  ],
+  "after-operator-inbox-320.png": [
+    305,
+    763
+  ],
+  "after-operator-inbox-768.png": [
+    753,
+    784
+  ],
+  "after-operator-login-320.png": [
+    305,
+    763
+  ],
+  "after-tours-320.png": [
+    305,
+    763
+  ],
+  "before-desktop.png": [
+    1425,
+    990
+  ],
+  "before-mobile.png": [
+    345,
+    767
+  ],
+  "fallback-mobile.png": [
+    345,
+    767
+  ],
+  "keyboard-focus.png": [
+    345,
+    767
+  ]
+}

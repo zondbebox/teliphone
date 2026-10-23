@@ -1,0 +1,152 @@
+[
+  {
+    "inputs": [
+      {
+        "height": 72.80000305175781,
+        "name": "body",
+        "size": "16px"
+      },
+      {
+        "height": 48,
+        "name": "departureId",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "party",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#tour/charyn",
+    "scroll": 305,
+    "total": "116,000 KZT",
+    "truth": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "width": 320
+  },
+  {
+    "inputs": [
+      {
+        "height": 72.80000305175781,
+        "name": "body",
+        "size": "16px"
+      },
+      {
+        "height": 48,
+        "name": "departureId",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "party",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#tour/charyn",
+    "scroll": 345,
+    "total": "116,000 KZT",
+    "truth": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "width": 360
+  },
+  {
+    "inputs": [
+      {
+        "height": 72.80000305175781,
+        "name": "body",
+        "size": "16px"
+      },
+      {
+        "height": 48,
+        "name": "departureId",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "party",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#tour/charyn",
+    "scroll": 375,
+    "total": "116,000 KZT",
+    "truth": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "width": 390
+  },
+  {
+    "inputs": [
+      {
+        "height": 72.80000305175781,
+        "name": "body",
+        "size": "16px"
+      },
+      {
+        "height": 48,
+        "name": "departureId",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "party",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#tour/charyn",
+    "scroll": 415,
+    "total": "116,000 KZT",
+    "truth": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "width": 430
+  },
+  {
+    "inputs": [
+      {
+        "height": 72.80000305175781,
+        "name": "body",
+        "size": "16px"
+      },
+      {
+        "height": 48,
+        "name": "departureId",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "party",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#tour/charyn",
+    "scroll": 753,
+    "total": "116,000 KZT",
+    "truth": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "width": 768
+  },
+  {
+    "inputs": [
+      {
+        "height": 72.80000305175781,
+        "name": "body",
+        "size": "16px"
+      },
+      {
+        "height": 48,
+        "name": "departureId",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "party",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#tour/charyn",
+    "scroll": 1425,
+    "total": "116,000 KZT",
+    "truth": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "width": 1440
+  }
+]

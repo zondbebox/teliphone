@@ -1,6 +1,17 @@
-# Samal Journeys by Saryarqa Routes
+# Samal Journey by Saryarqa Routes
 
 An English, AI-assisted working package for ZERTTEX Hackathon 2026, Stage 1, Case 1. The fictional operator's trips are presented through one versioned **Trip Truth Card**, then a validated local booking journey. This is a reviewable demonstration, not a production travel service or an approved competition submission.
+
+## Latest review package
+
+The current product name is **Samal Journey**, for **Saryarqa Routes**. The website uses locally hosted DM Sans. Existing storage keys, routes and package identifiers remain compatible.
+
+- [Revised PDF](revisions/2026-10-23/report/TeamName_TechnologyProduct.pdf) and [Word](revisions/2026-10-23/report/TeamName_TechnologyProduct.docx).
+- [Revised financial workbook](revisions/2026-10-23/finance/Samal_Journey_Financial_Model.xlsx), copied from the canonical model without economic changes.
+- [Fact checks](revisions/2026-10-23/fact-check.md), [financial audit](revisions/2026-10-23/finance/FINANCIAL_REVIEW.md), and [team review questions](revisions/2026-10-23/report/review-notes.md).
+- [Typography and verification record](revisions/2026-10-23/verification.md), including screenshot pairs and exact limitations.
+
+These are review drafts: TeamName is an unresolved placeholder, substantive team contributions and official AI classification remain pending. PDF layout is visually checked; DOCX pagination and native Excel desktop recalculation are unverified. The original deliverables below remain historical copies.
 
 ## Run locally
 
@@ -51,7 +62,7 @@ node finance/calculate.mjs
 node finance/test_model.mjs
 ```
 
-`build` checks JavaScript syntax and copies a runnable local bundle to ignored `dist/`. It is **not** a browser test or a deployment. This JavaScript project has no separate TypeScript compiler or lint configuration; these are not claimed as passed. Current brand, browser and artifact evidence is in `docs/samal-verification.md`; earlier workflow checks remain in `docs/full-demo-verification.md` and `docs/verification.md`. The report has been refreshed for the current Samal Journeys demo.
+`build` checks JavaScript syntax and copies a runnable local bundle to ignored `dist/`. It is **not** a browser test or a deployment. This JavaScript project has no separate TypeScript compiler or lint configuration; these are not claimed as passed. Current typography, browser and artifact evidence is in `revisions/2026-10-23/verification.md`. Earlier workflow checks remain in `docs/samal-verification.md`, `docs/full-demo-verification.md` and `docs/verification.md`. The separate revision package preserves every original report and financial artifact.
 
 The HTTP tests start independent temporary servers and stores. They do not modify your demo bookings. UI regression tests exercise real route/form handlers through a limited DOM boundary; visual and keyboard testing is performed separately in the browser.
 

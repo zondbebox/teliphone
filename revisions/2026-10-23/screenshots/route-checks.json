@@ -1,0 +1,922 @@
+[
+  {
+    "inputs": [
+      {
+        "height": 72.80000305175781,
+        "name": "body",
+        "size": "16px"
+      },
+      {
+        "height": 48,
+        "name": "departureId",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "party",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#tour/charyn",
+    "scroll": 305,
+    "total": "116,000 KZT",
+    "truth": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "width": 320
+  },
+  {
+    "inputs": [
+      {
+        "height": 72.80000305175781,
+        "name": "body",
+        "size": "16px"
+      },
+      {
+        "height": 48,
+        "name": "departureId",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "party",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#tour/charyn",
+    "scroll": 345,
+    "total": "116,000 KZT",
+    "truth": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "width": 360
+  },
+  {
+    "inputs": [
+      {
+        "height": 72.80000305175781,
+        "name": "body",
+        "size": "16px"
+      },
+      {
+        "height": 48,
+        "name": "departureId",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "party",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#tour/charyn",
+    "scroll": 375,
+    "total": "116,000 KZT",
+    "truth": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "width": 390
+  },
+  {
+    "inputs": [
+      {
+        "height": 72.80000305175781,
+        "name": "body",
+        "size": "16px"
+      },
+      {
+        "height": 48,
+        "name": "departureId",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "party",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#tour/charyn",
+    "scroll": 415,
+    "total": "116,000 KZT",
+    "truth": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "width": 430
+  },
+  {
+    "inputs": [
+      {
+        "height": 72.80000305175781,
+        "name": "body",
+        "size": "16px"
+      },
+      {
+        "height": 48,
+        "name": "departureId",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "party",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#tour/charyn",
+    "scroll": 753,
+    "total": "116,000 KZT",
+    "truth": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "width": 768
+  },
+  {
+    "inputs": [
+      {
+        "height": 72.80000305175781,
+        "name": "body",
+        "size": "16px"
+      },
+      {
+        "height": 48,
+        "name": "departureId",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "party",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#tour/charyn",
+    "scroll": 1425,
+    "total": "116,000 KZT",
+    "truth": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "width": 1440
+  },
+  {
+    "h1": "32px",
+    "inputs": [
+      {
+        "height": 48.79999923706055,
+        "name": "name",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "email",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#checkout/charyn",
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "h1": "32px",
+    "inputs": [
+      {
+        "height": 48.79999923706055,
+        "name": "name",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "email",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#checkout/charyn",
+    "scroll": 345,
+    "width": 360
+  },
+  {
+    "h1": "32.16px",
+    "inputs": [
+      {
+        "height": 48.79999923706055,
+        "name": "name",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "email",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#checkout/charyn",
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "h1": "33.16px",
+    "inputs": [
+      {
+        "height": 48.79999923706055,
+        "name": "name",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "email",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#checkout/charyn",
+    "scroll": 415,
+    "width": 430
+  },
+  {
+    "h1": "41.6px",
+    "inputs": [
+      {
+        "height": 48.79999923706055,
+        "name": "name",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "email",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#checkout/charyn",
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "h1": "56px",
+    "inputs": [
+      {
+        "height": 48.79999923706055,
+        "name": "name",
+        "size": "16px"
+      },
+      {
+        "height": 48.79999923706055,
+        "name": "email",
+        "size": "16px"
+      }
+    ],
+    "overflow": [],
+    "route": "#checkout/charyn",
+    "scroll": 1425,
+    "width": 1440
+  },
+  {
+    "buttons": [
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate success ✓"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate decline"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate pending"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Cancel demo payment"
+      }
+    ],
+    "overflow": [],
+    "route": "#payment/c3d6ca27-4a1b-4bdb-84ae-328a47f483ae",
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "buttons": [
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate success ✓"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate decline"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate pending"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Cancel demo payment"
+      }
+    ],
+    "overflow": [],
+    "route": "#payment/c3d6ca27-4a1b-4bdb-84ae-328a47f483ae",
+    "scroll": 345,
+    "width": 360
+  },
+  {
+    "buttons": [
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate success ✓"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate decline"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate pending"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Cancel demo payment"
+      }
+    ],
+    "overflow": [],
+    "route": "#payment/c3d6ca27-4a1b-4bdb-84ae-328a47f483ae",
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "buttons": [
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate success ✓"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate decline"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate pending"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Cancel demo payment"
+      }
+    ],
+    "overflow": [],
+    "route": "#payment/c3d6ca27-4a1b-4bdb-84ae-328a47f483ae",
+    "scroll": 415,
+    "width": 430
+  },
+  {
+    "buttons": [
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate success ✓"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate decline"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate pending"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Cancel demo payment"
+      }
+    ],
+    "overflow": [],
+    "route": "#payment/c3d6ca27-4a1b-4bdb-84ae-328a47f483ae",
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "buttons": [
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate success ✓"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate decline"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Simulate pending"
+      },
+      {
+        "h": 58,
+        "size": "16px",
+        "text": "Cancel demo payment"
+      }
+    ],
+    "overflow": [],
+    "route": "#payment/c3d6ca27-4a1b-4bdb-84ae-328a47f483ae",
+    "scroll": 1425,
+    "width": 1440
+  },
+  {
+    "caption": "15px",
+    "overflow": [],
+    "price": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "route": "#passport/c3d6ca27-4a1b-4bdb-84ae-328a47f483ae",
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "caption": "15px",
+    "overflow": [],
+    "price": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "route": "#passport/c3d6ca27-4a1b-4bdb-84ae-328a47f483ae",
+    "scroll": 345,
+    "width": 360
+  },
+  {
+    "caption": "15px",
+    "overflow": [],
+    "price": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "route": "#passport/c3d6ca27-4a1b-4bdb-84ae-328a47f483ae",
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "caption": "15px",
+    "overflow": [],
+    "price": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "route": "#passport/c3d6ca27-4a1b-4bdb-84ae-328a47f483ae",
+    "scroll": 415,
+    "width": 430
+  },
+  {
+    "caption": "15px",
+    "overflow": [],
+    "price": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "route": "#passport/c3d6ca27-4a1b-4bdb-84ae-328a47f483ae",
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "caption": "15px",
+    "overflow": [],
+    "price": "58,000 KZTper traveler · 116,000 KZT for 2",
+    "route": "#passport/c3d6ca27-4a1b-4bdb-84ae-328a47f483ae",
+    "scroll": 1425,
+    "width": 1440
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#tours",
+    "scroll": 305,
+    "smallControls": [],
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#tours",
+    "scroll": 345,
+    "smallControls": [],
+    "width": 360
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#tours",
+    "scroll": 375,
+    "smallControls": [],
+    "width": 390
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#tours",
+    "scroll": 415,
+    "smallControls": [],
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#tours",
+    "scroll": 753,
+    "smallControls": [],
+    "width": 768
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#tours",
+    "scroll": 1425,
+    "smallControls": [],
+    "width": 1440
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#story",
+    "scroll": 305,
+    "smallControls": [],
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#story",
+    "scroll": 345,
+    "smallControls": [],
+    "width": 360
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#story",
+    "scroll": 375,
+    "smallControls": [],
+    "width": 390
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#story",
+    "scroll": 415,
+    "smallControls": [],
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#story",
+    "scroll": 753,
+    "smallControls": [],
+    "width": 768
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#story",
+    "scroll": 1425,
+    "smallControls": [],
+    "width": 1440
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#match",
+    "scroll": 305,
+    "smallControls": [],
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#match",
+    "scroll": 345,
+    "smallControls": [],
+    "width": 360
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#match",
+    "scroll": 375,
+    "smallControls": [],
+    "width": 390
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#match",
+    "scroll": 415,
+    "smallControls": [],
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#match",
+    "scroll": 753,
+    "smallControls": [],
+    "width": 768
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#match",
+    "scroll": 1425,
+    "smallControls": [],
+    "width": 1440
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 305,
+    "smallControls": [],
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 345,
+    "smallControls": [],
+    "width": 360
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 375,
+    "smallControls": [],
+    "width": 390
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 415,
+    "smallControls": [],
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 753,
+    "smallControls": [],
+    "width": 768
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 1425,
+    "smallControls": [],
+    "width": 1440
+  },
+  {
+    "clipped": [],
+    "overflow": [
+      "op-mobile-tabs"
+    ],
+    "route": "#operator",
+    "scroll": 307,
+    "smallControls": [],
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "overflow": [
+      "op-mobile-tabs"
+    ],
+    "route": "#operator",
+    "scroll": 347,
+    "smallControls": [],
+    "width": 360
+  },
+  {
+    "clipped": [],
+    "overflow": [
+      "op-mobile-tabs"
+    ],
+    "route": "#operator",
+    "scroll": 378,
+    "smallControls": [],
+    "width": 390
+  },
+  {
+    "clipped": [],
+    "overflow": [
+      "op-mobile-tabs"
+    ],
+    "route": "#operator",
+    "scroll": 418,
+    "smallControls": [],
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 753,
+    "smallControls": [],
+    "width": 768
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 1425,
+    "smallControls": [],
+    "width": 1440
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 305,
+    "smallControls": [],
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 345,
+    "smallControls": [],
+    "width": 360
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 375,
+    "smallControls": [],
+    "width": 390
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 415,
+    "smallControls": [],
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 753,
+    "smallControls": [],
+    "width": 768
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator",
+    "scroll": 1425,
+    "smallControls": [],
+    "width": 1440
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/catalog",
+    "scroll": 305,
+    "smallControls": [],
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/catalog",
+    "scroll": 345,
+    "smallControls": [],
+    "width": 360
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/catalog",
+    "scroll": 375,
+    "smallControls": [],
+    "width": 390
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/catalog",
+    "scroll": 415,
+    "smallControls": [],
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/catalog",
+    "scroll": 753,
+    "smallControls": [],
+    "width": 768
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/catalog",
+    "scroll": 1425,
+    "smallControls": [],
+    "width": 1440
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/catalog/edit/charyn",
+    "scroll": 305,
+    "smallControls": [],
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/catalog/edit/charyn",
+    "scroll": 345,
+    "smallControls": [],
+    "width": 360
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/catalog/edit/charyn",
+    "scroll": 375,
+    "smallControls": [],
+    "width": 390
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/catalog/edit/charyn",
+    "scroll": 415,
+    "smallControls": [],
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/catalog/edit/charyn",
+    "scroll": 753,
+    "smallControls": [],
+    "width": 768
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/catalog/edit/charyn",
+    "scroll": 1425,
+    "smallControls": [],
+    "width": 1440
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/inbox",
+    "scroll": 305,
+    "smallControls": [],
+    "width": 320
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/inbox",
+    "scroll": 345,
+    "smallControls": [],
+    "width": 360
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/inbox",
+    "scroll": 375,
+    "smallControls": [],
+    "width": 390
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/inbox",
+    "scroll": 415,
+    "smallControls": [],
+    "width": 430
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/inbox",
+    "scroll": 753,
+    "smallControls": [],
+    "width": 768
+  },
+  {
+    "clipped": [],
+    "overflow": [],
+    "route": "#operator/inbox",
+    "scroll": 1425,
+    "smallControls": [],
+    "width": 1440
+  }
+]

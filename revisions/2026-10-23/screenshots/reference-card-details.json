@@ -1,0 +1,174 @@
+[
+  {
+    "inputs": [
+      {
+        "family": "\"PP Neue Montreal\", Arial, sans-serif",
+        "size": "18.1333px",
+        "tag": "INPUT",
+        "type": "hidden",
+        "visible": false
+      }
+    ],
+    "items": [
+      {
+        "cls": "tag",
+        "family": "\"IBM Plex Mono\", monospace",
+        "line": "14px",
+        "size": "14px",
+        "tag": "DIV",
+        "text": "Accompagné",
+        "weight": "400"
+      },
+      {
+        "cls": "product-card__infos-title",
+        "family": "\"PP Neue Montreal\", Arial, sans-serif",
+        "line": "27px",
+        "size": "27px",
+        "tag": "H5",
+        "text": "Le Japon & la Corée du Sud",
+        "weight": "700"
+      },
+      {
+        "cls": "tag",
+        "family": "\"IBM Plex Mono\", monospace",
+        "line": "14px",
+        "size": "14px",
+        "tag": "DIV",
+        "text": "Voyage de groupe",
+        "weight": "400"
+      },
+      {
+        "cls": "tag",
+        "family": "\"IBM Plex Mono\", monospace",
+        "line": "14px",
+        "size": "14px",
+        "tag": "DIV",
+        "text": "Croisière",
+        "weight": "400"
+      },
+      {
+        "cls": "",
+        "family": "\"PP Neue Montreal\", Arial, sans-serif",
+        "line": "20.91px",
+        "size": "17px",
+        "tag": "LI",
+        "text": "16 jours",
+        "weight": "400"
+      },
+      {
+        "cls": "",
+        "family": "\"PP Neue Montreal\", Arial, sans-serif",
+        "line": "20.91px",
+        "size": "17px",
+        "tag": "LI",
+        "text": "14 nuits",
+        "weight": "400"
+      },
+      {
+        "cls": "",
+        "family": "\"PP Neue Montreal\", Arial, sans-serif",
+        "line": "20.91px",
+        "size": "17px",
+        "tag": "LI",
+        "text": "38 repas",
+        "weight": "400"
+      },
+      {
+        "cls": "",
+        "family": "\"PP Neue Montreal\", Arial, sans-serif",
+        "line": "31.05px",
+        "size": "27px",
+        "tag": "STRONG",
+        "text": "9 899 $*",
+        "weight": "700"
+      }
+    ],
+    "width": 1440
+  },
+  {
+    "inputs": [
+      {
+        "family": "\"PP Neue Montreal\", Arial, sans-serif",
+        "size": "18.1333px",
+        "tag": "INPUT",
+        "type": "hidden",
+        "visible": false
+      }
+    ],
+    "items": [
+      {
+        "cls": "tag",
+        "family": "\"IBM Plex Mono\", monospace",
+        "line": "14px",
+        "size": "14px",
+        "tag": "DIV",
+        "text": "Accompagné",
+        "weight": "400"
+      },
+      {
+        "cls": "product-card__infos-title",
+        "family": "\"PP Neue Montreal\", Arial, sans-serif",
+        "line": "25.92px",
+        "size": "25.92px",
+        "tag": "H5",
+        "text": "Le Japon & la Corée du Sud",
+        "weight": "700"
+      },
+      {
+        "cls": "tag",
+        "family": "\"IBM Plex Mono\", monospace",
+        "line": "14px",
+        "size": "14px",
+        "tag": "DIV",
+        "text": "Voyage de groupe",
+        "weight": "400"
+      },
+      {
+        "cls": "tag",
+        "family": "\"IBM Plex Mono\", monospace",
+        "line": "14px",
+        "size": "14px",
+        "tag": "DIV",
+        "text": "Croisière",
+        "weight": "400"
+      },
+      {
+        "cls": "",
+        "family": "\"PP Neue Montreal\", Arial, sans-serif",
+        "line": "14.1696px",
+        "size": "11.52px",
+        "tag": "LI",
+        "text": "16 jours",
+        "weight": "400"
+      },
+      {
+        "cls": "",
+        "family": "\"PP Neue Montreal\", Arial, sans-serif",
+        "line": "14.1696px",
+        "size": "11.52px",
+        "tag": "LI",
+        "text": "14 nuits",
+        "weight": "400"
+      },
+      {
+        "cls": "",
+        "family": "\"PP Neue Montreal\", Arial, sans-serif",
+        "line": "14.1696px",
+        "size": "11.52px",
+        "tag": "LI",
+        "text": "38 repas",
+        "weight": "400"
+      },
+      {
+        "cls": "",
+        "family": "\"PP Neue Montreal\", Arial, sans-serif",
+        "line": "21.0409px",
+        "size": "18.2965px",
+        "tag": "STRONG",
+        "text": "9 899 $*",
+        "weight": "700"
+      }
+    ],
+    "width": 360
+  }
+]

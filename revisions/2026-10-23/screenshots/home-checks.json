@@ -1,0 +1,152 @@
+[
+  {
+    "bodyLine": "28.05px",
+    "bodySize": "17px",
+    "clientWidth": 305,
+    "height": 800,
+    "heroSize": "34px",
+    "nav": [
+      {
+        "height": 44.75,
+        "text": "Journeys"
+      },
+      {
+        "height": 44.75,
+        "text": "Our story"
+      },
+      {
+        "height": 44.75,
+        "text": "Passport"
+      }
+    ],
+    "overflow": [],
+    "route": "home-final",
+    "scrollWidth": 305,
+    "width": 320
+  },
+  {
+    "bodyLine": "28.05px",
+    "bodySize": "17px",
+    "clientWidth": 345,
+    "height": 800,
+    "heroSize": "34.8px",
+    "nav": [
+      {
+        "height": 44.75,
+        "text": "Journeys"
+      },
+      {
+        "height": 44.75,
+        "text": "Our story"
+      },
+      {
+        "height": 44.75,
+        "text": "Passport"
+      }
+    ],
+    "overflow": [],
+    "route": "home-final",
+    "scrollWidth": 345,
+    "width": 360
+  },
+  {
+    "bodyLine": "28.05px",
+    "bodySize": "17px",
+    "clientWidth": 375,
+    "height": 800,
+    "heroSize": "35.712px",
+    "nav": [
+      {
+        "height": 44.75,
+        "text": "Journeys"
+      },
+      {
+        "height": 44.75,
+        "text": "Our story"
+      },
+      {
+        "height": 44.75,
+        "text": "Passport"
+      }
+    ],
+    "overflow": [],
+    "route": "home-final",
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "bodyLine": "28.05px",
+    "bodySize": "17px",
+    "clientWidth": 415,
+    "height": 800,
+    "heroSize": "36.912px",
+    "nav": [
+      {
+        "height": 44.75,
+        "text": "Journeys"
+      },
+      {
+        "height": 44.75,
+        "text": "Our story"
+      },
+      {
+        "height": 44.75,
+        "text": "Passport"
+      }
+    ],
+    "overflow": [],
+    "route": "home-final",
+    "scrollWidth": 415,
+    "width": 430
+  },
+  {
+    "bodyLine": "28.05px",
+    "bodySize": "17px",
+    "clientWidth": 753,
+    "height": 800,
+    "heroSize": "47.04px",
+    "nav": [
+      {
+        "height": 46.75,
+        "text": "Journeys"
+      },
+      {
+        "height": 46.75,
+        "text": "Our story"
+      },
+      {
+        "height": 46.75,
+        "text": "Passport"
+      }
+    ],
+    "overflow": [],
+    "route": "home-final",
+    "scrollWidth": 753,
+    "width": 768
+  },
+  {
+    "bodyLine": "28.05px",
+    "bodySize": "17px",
+    "clientWidth": 1425,
+    "height": 1000,
+    "heroSize": "67.2px",
+    "nav": [
+      {
+        "height": 0,
+        "text": "Journeys"
+      },
+      {
+        "height": 0,
+        "text": "Our story"
+      },
+      {
+        "height": 0,
+        "text": "Passport"
+      }
+    ],
+    "overflow": [],
+    "route": "home-final",
+    "scrollWidth": 1425,
+    "width": 1440
+  }
+]

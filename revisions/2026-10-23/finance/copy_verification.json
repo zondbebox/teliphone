@@ -1,0 +1,20 @@
+{
+  "source": "finance/Samal_Journeys_Financial_Model.xlsx",
+  "edit": "Summary!C2 only: Samal Journey financial outlook",
+  "checks": [
+    "Base: year-one completed travelers",
+    "Base: year-two completed travelers",
+    "Base: 24-month cash flow",
+    "Base: year-two foreign share",
+    "Base: year-one cash uses",
+    "Base: payback",
+    "Downside: year-one completed travelers",
+    "Downside: year-two completed travelers",
+    "Downside: 24-month cash flow",
+    "Downside: year-two foreign share",
+    "Downside: year-one cash uses",
+    "Downside: payback"
+  ],
+  "formula_error_scan": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}",
+  "limitation": "Artifact Tool import/recalculation/export checked. Native Microsoft Excel desktop behavior was not verified."
+}

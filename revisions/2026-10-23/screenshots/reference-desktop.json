@@ -1,0 +1,816 @@
+{
+  "elements": [
+    {
+      "cls": "header__main-link",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "18px",
+      "size": "15px",
+      "text": "Destinations",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "header__main-link",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "18px",
+      "size": "15px",
+      "text": "Produits vedettes",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "header__main-link",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "18px",
+      "size": "15px",
+      "text": "Espace voyageur",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "header__main-link",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "23px",
+      "size": "20px",
+      "text": "Destinations",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "header__main-link",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "23px",
+      "size": "20px",
+      "text": "Produits vedettes",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "header__main-link",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "23px",
+      "size": "20px",
+      "text": "Espace voyageur",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "search-bar__label results",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Rechercher\n        \n        \n                    Effacer",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "search-bar__label dates",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Quand\n        \n        \n            Période souhaitée\n      ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "search-bar__label destinations",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Où\n        \n        \n            Toutes nos destinations",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag is-selected",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Toutes durées",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "3 à 7 jours",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "7 à 15 jours",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "15 à 21 jours",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "22 jours et +",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "header__title ",
+      "family": "Gascogne, serif",
+      "line": "90px",
+      "size": "100px",
+      "text": "Tours Chanteclerc vous offre le monde",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "search-bar__label results",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Rechercher",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "search-bar__label dates",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Quand\n        \n        \n            Période souhaitée",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "search-bar__label destinations",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Où\n        \n        \n            Toutes nos destinations",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "carrousel__title is-animated",
+      "family": "Gascogne, serif",
+      "line": "72px",
+      "size": "80px",
+      "text": "Les destinations",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "Afrique",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "Asie",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "Amérique centrale & Caraïbes",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "Amérique du Nord",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "Amérique du Sud",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "Europe & Meditérrannée",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "Pacifique Sud",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "productsList__title animated-title",
+      "family": "Gascogne, serif",
+      "line": "72px",
+      "size": "80px",
+      "text": "Produits vedettes",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__img-wrapper",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Accompagné",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__img",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Accompagné",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Le Japon & la Corée du Sud\n    \n            \n               ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos-title",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "Le Japon & la Corée du Sud",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "product-card__infos-tags",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Voyage de groupe\n                                           ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Voyage de groupe",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Croisière",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos-table",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "16 jours\n                                                   ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__img-wrapper",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Coup de coeur",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__img",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Coup de coeur",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "La grande échappée française\n    \n            \n             ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos-title",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "La grande échappée française",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "product-card__infos-tags",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Voyage de groupe\n                                           ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Voyage de groupe",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Croisière",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos-table",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "18 jours\n                                                   ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__img-wrapper",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Départ garanti",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__img",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Départ garanti",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Andalousie authentique & séjour au Bajondillo\n    \n         ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos-title",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "Andalousie authentique & séjour au Bajondillo",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "product-card__infos-tags",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Voyage de groupe\n                                           ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Voyage de groupe",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Croisière",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos-table",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "18 jours\n                                                   ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__img-wrapper",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Coup de coeur",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__img",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Coup de coeur",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Séjour en Calabre et Sicile\n    \n            \n              ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos-title",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "Séjour en Calabre et Sicile",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "product-card__infos-tags",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Voyage de groupe\n                                           ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Voyage de groupe",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Séjour",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos-table",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "16 jours\n                                                   ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__img-wrapper",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Safari",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__img",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Safari",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Beautés de l'Afrique du Sud\n    \n            \n              ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos-title",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "Beautés de l'Afrique du Sud",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "product-card__infos-tags",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Voyage de groupe\n                                           ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Voyage de groupe",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Circuit",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos-table",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "16 jours\n                                                   ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__img-wrapper",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Coup de coeur",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__img",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Coup de coeur",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Ouest canadien\n    \n            \n                           ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos-title",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "27px",
+      "size": "27px",
+      "text": "Ouest canadien",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "product-card__infos-tags",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "Voyage de groupe\n                                           ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Voyage de groupe",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "tag",
+      "family": "\"IBM Plex Mono\", monospace",
+      "line": "14px",
+      "size": "14px",
+      "text": "Circuit",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "product-card__infos-table",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "19.55px",
+      "size": "17px",
+      "text": "13 jours\n                                                   ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "mediaText__txt-title animated-title",
+      "family": "Gascogne, serif",
+      "line": "54px",
+      "size": "60px",
+      "text": "La qualité depuis 1970",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "25.5px",
+      "size": "17px",
+      "text": "Tours Chanteclerc continue de faire vivre à des milliers de ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "mediaText__txt-title animated-title",
+      "family": "Gascogne, serif",
+      "line": "54px",
+      "size": "60px",
+      "text": "Votre porte d'entréesur le monde",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "25.5px",
+      "size": "17px",
+      "text": "Tours Chanteclerc est votre porte d'entrée vers des aventure",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "article__infos-title",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "30px",
+      "size": "25px",
+      "text": "Europe 2027 : Planifiez votre voyage dès maintenant !",
+      "tracking": "normal",
+      "weight": "700"
+    },
+    {
+      "cls": "textBanner__title animated-title",
+      "family": "Gascogne, serif",
+      "line": "72px",
+      "size": "80px",
+      "text": "Confiez votre projetde voyage à l’un denos 50 meilleursparte",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "textBanner__txt",
+      "family": "\"PP Neue Montreal\", Arial, sans-serif",
+      "line": "24.99px",
+      "size": "17px",
+      "text": "Chaque année, l’équipe de Tours Chanteclerc sélectionne les ",
+      "tracking": "normal",
+      "weight": "400"
+    },
+    {
+      "cls": "",
+      "family": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "line": "22.4px",
+      "size": "16px",
+      "text": "Bienvenue chez Tours Chanteclerc!",
+      "tracking": "normal",
+      "weight": "600"
+    },
+    {
+      "cls": "",
+      "family": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif",
+      "line": "19.6px",
+      "size": "14px",
+      "text": "Comment pouvons-nous vous aider?",
+      "tracking": "normal",
+      "weight": "400"
+    }
+  ],
+  "height": 1000,
+  "width": 1440
+}

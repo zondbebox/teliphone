@@ -1,0 +1,25 @@
+{
+  "baseline": "ff7363fbaf438184b79584dc51cfa7477af8e9a9",
+  "git_diff_original_artifacts": [],
+  "sha256": {
+    "docs/report.md": "fdecd4358f56a71df655b47a3af8977f88a875737d4a2cf9bcfa9a0beff84a9b",
+    "scripts/build_report.py": "cadc77502caca0e6a6976cee86a52537435c24a63514bc3e78785a62ff6e9204",
+    "assets/flow.png": "5d23a103f8c322c547de6fe4a3653a5efb127ef38277f2d9a40567b01c0daad6",
+    "deliverables/report_verification.json": "2aebe1c3ab0183828c6649f436b8895671060b3a8b7ea6a7e236aad5be52e77a",
+    "deliverables/TeamName_TechnologyProduct.docx": "b8e891d17498af2ec05421fce9763510a26f9b85625e2cbec306bea4aa55c788",
+    "deliverables/TeamName_TechnologyProduct.pdf": "04ed862ee451343cf7c09e58d51bba6721cc4355ac925dc965c765fff7d8ecbd",
+    "finance/.gitignore": "0ac30ea12502120c197f0e0aa7619d6377e6888d14f21f4470a4ad286df9cdd4",
+    "finance/brand_verification.json": "bf34c985f5ab9ea2e595e98ef2e911f104745bcdfe7c53040bd94509b98372f6",
+    "finance/build_workbook.mjs": "6b517e964e41d24e9fd34088c63e15c6ca65a1c69e7c4f43f7714ea86d451a80",
+    "finance/calculate.mjs": "89ea2043f674ae3c07a6e52d91545b0ba7981edd50ca45db6bd649ebadc474c9",
+    "finance/inputs.json": "f883fcdd65aacbd49cd1c16328726ca6e1d6e20679f0bff9a36f41d6fb21061e",
+    "finance/monthly_cash_flows.csv": "f1b3d2e9376839c88dd15e20dc81c317ac57919246484a2c3953b8aec5952d41",
+    "finance/README.md": "2cbd7946a82d14da6fe9bdf48fe5923d550f1e11716362d110b04d668d641185",
+    "finance/Samal_Journeys_Financial_Model.xlsx": "4e49d353250570914ca2d93068b4ea60a892d4a07f081bc0a784330b914ad2c0",
+    "finance/Samal_Journeys_Financial_Model.xlsx.inspect.ndjson": "f2adb83a8da3003c51b2aa140844aa5158972829ad0226fa458c53edff82e442",
+    "finance/summary.json": "20117c2d79edcaa6abca440a56eb95a51b8ee2fec672bf1d71f2695f7c1ada9d",
+    "finance/test_model.mjs": "5568f4808905dc8728e5e761652b35581dffcaf4ef76dd51632ff22e5c671a7a",
+    "finance/verify_export.py": "10bf5e00aa5c2d2db5f2e546bfd5637ee3633d5a2baf9deacc5cddee8832a32e",
+    "finance/workbook_verification.json": "0bed103d32ea641346db1ddf34f40ec5718d58d6293b8ea6a8a40ce845ce49a3"
+  }
+}
